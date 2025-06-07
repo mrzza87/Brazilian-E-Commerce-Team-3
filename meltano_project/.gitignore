@@ -1,3 +1,6 @@
 /venv
 /.meltano
 .env
+meltano_project/output.jsonl
+meltano_project/test_output.jsonl
+# Ignore Python cache files

@@ -1,0 +1,61 @@
+version: 1
+default_environment: dev
+project_id: 2a1582c4-2d4f-45c1-a5c8-5b69c01f1017
+
+environments:
+  - name: dev
+  - name: staging
+  - name: prod
+
+plugins:
+  extractors:
+    - name: tap-csv
+      variant: meltanolabs
+      namespace: tap_csv
+      pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+      executable: tap-csv
+      config:
+        files:
+          - entity: orders
+            path: ../data/raw/olist_orders_dataset_clean.csv
+            keys: ["order_id"]
+            delimiter: ","
+            encoding: "utf-8"
+            format: "csv"
+          - entity: order_items
+            path: ../data/raw/olist_order_items_dataset_clean.csv
+            keys: ["order_id", "order_item_id"]
+            delimiter: ","
+            encoding: "utf-8"
+            format: "csv"
+          - entity: customers
+            path: ../data/raw/olist_customers_dataset.csv
+            keys: ["customer_id"]
+            delimiter: ","
+            encoding: "utf-8"
+            format: "csv"
+          - entity: products
+            path: ../data/raw/olist_products_dataset.csv
+            keys: ["product_id"]
+            delimiter: ","
+            encoding: "utf-8"
+            format: "csv"
+          - entity: sellers
+            path: ../data/raw/olist_sellers_dataset.csv
+            keys: ["seller_id"]
+            delimiter: ","
+            encoding: "utf-8"
+            format: "csv"
+
+  loaders:
+    - name: target-bigquery
+      variant: z3z1ma
+      pip_url: git+https://github.com/z3z1ma/target-bigquery.git
+      config:
+        project: brazilian-e-commerce-team-3
+        dataset: BET_Team3
+        credentials_path: ../brazilian-e-commerce-team-3-f5654e7ebd43.json
+        method: batch_job
+        denormalized: true
+        flattening_enabled: true
+        flattening_max_depth: 1

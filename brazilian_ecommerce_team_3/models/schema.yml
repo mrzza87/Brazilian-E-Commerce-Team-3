@@ -1,0 +1,106 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Fact table containing individual sales transactions"
+    columns:
+      - name: order_id
+        description: "Unique ID for the order"
+        tests: [not_null]
+      - name: order_item_id
+        description: "Item-level granularity"
+        tests: [not_null]
+      - name: customer_id
+        description: "Foreign key to dim_customers"
+        tests: [not_null]
+      - name: product_id
+        description: "Foreign key to dim_products"
+        tests: [not_null]
+      - name: seller_id
+        description: "Foreign key to dim_sellers"
+        tests: [not_null]
+      - name: payment_type
+        description: "Type of payment method used"
+      - name: payment_installments
+        description: "Number of payment installments"
+      - name: review_score
+        description: "Customer review score"
+      - name: order_status
+        description: "Current order status"
+      - name: order_purchase_timestamp
+        description: "Datetime the order was placed"
+      - name: order_delivered_customer_date
+        description: "Datetime the order was delivered"
+      - name: order_estimated_delivery_date
+        description: "Datetime the order was expected"
+      - name: price
+        description: "Price of the item"
+      - name: freight_value
+        description: "Freight cost for the order"
+
+  - name: dim_customers
+    description: "Customer dimension with city and state"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests: [unique, not_null]
+      - name: customer_unique_id
+        description: "Unique identifier for the customer"
+      - name: customer_city
+        description: "City of the customer"
+      - name: customer_state
+        description: "State of the customer"
+
+  - name: dim_products
+    description: "Product dimension with category name"
+    columns:
+      - name: product_id
+        description: "Primary key"
+        tests: [unique, not_null]
+      - name: product_category_name
+        description: "Product category"
+
+  - name: dim_sellers
+    description: "Seller dimension with city and state"
+    columns:
+      - name: seller_id
+        description: "Primary key"
+        tests: [unique, not_null]
+      - name: seller_city
+        description: "City of the seller"
+      - name: seller_state
+        description: "State of the seller"
+
+  - name: dim_geolocation
+    description: "Geographic dimension by zip code"
+    columns:
+      - name: geolocation_zip_code_prefix
+        description: "Primary key"
+        tests: [not_null]
+      - name: geolocation_lat
+      - name: geolocation_lng
+      - name: geolocation_city
+      - name: geolocation_state
+
+  - name: dim_date
+    description: "Date dimension extracted from order timestamps"
+    columns:
+      - name: date_id
+        description: "Primary key - date"
+        tests: [unique, not_null]
+      - name: day
+      - name: month
+      - name: year
+      - name: quarter
+
+  - name: dim_payments
+    description: "Payments dimension table"
+    columns:
+      - name: order_id
+        description: "Foreign key to fact_sales"
+        tests: [not_null]
+      - name: payment_type
+        description: "Type of payment"
+        tests: [not_null]
+      - name: payment_installments
+        description: "Number of installments"

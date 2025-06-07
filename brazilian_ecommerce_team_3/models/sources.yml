@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: BET_Team3
+    database: brazilian-e-commerce-team-3
+    schema: BET_Team3
+    tables:
+      - name: customers
+      - name: sellers
+      - name: products
+      - name: order_items
+      - name: orders
+      - name: order_payments
+      - name: geolocation

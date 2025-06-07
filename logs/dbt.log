@@ -1,0 +1,144 @@
+[0m11:01:10.660053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104353e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105343d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053439d0>]}
+
+
+============================== 11:01:10.668053 | 7a43c79b-44b4-4f81-84e7-5563429ef89e ==============================
+[0m11:01:10.668053 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:01:10.669022 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/meowrissa/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:28.399182 [debug] [MainThread]: Starter project path: /Users/meowrissa/miniconda3/lib/python3.13/site-packages/dbt/include/starter_project
+[0m11:02:28.417069 [info ] [MainThread]: 
+Your new dbt project "BET_Team3" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:02:28.418311 [info ] [MainThread]: Setting up your profile.
+[0m11:28:06.016706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b1be00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b47d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b479d0>]}
+
+
+============================== 11:28:06.024440 | cfb2b3f8-0daa-479f-a817-ada9b3f4d428 ==============================
+[0m11:28:06.024440 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:28:06.025554 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/meowrissa/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:28:11.924425 [info ] [MainThread]: A project called BET_Team3 already exists here.
+[0m11:28:11.927994 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 6.02741, "process_in_blocks": "0", "process_kernel_time": 0.409382, "process_mem_max_rss": "99573760", "process_out_blocks": "0", "process_user_time": 1.982154}
+[0m11:28:11.928904 [debug] [MainThread]: Command `dbt init` succeeded at 11:28:11.928728 after 6.03 seconds
+[0m11:28:11.930217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c10770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bfbad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a3ee00>]}
+[0m11:28:11.930859 [debug] [MainThread]: Flushing usage events
+[0m11:28:13.212494 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:22:50.666415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d8a4e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128e88c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128e85c0>]}
+
+
+============================== 14:22:50.675735 | 4a3dcdf8-cd76-4b58-9444-9d2fb30581e6 ==============================
+[0m14:22:50.675735 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:22:50.676741 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/meowrissa/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init Brazilian-E-Commerce-Team-3', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:25:35.324405 [error] [MainThread]: Encountered an error:
+
+[0m14:25:35.331206 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/click/termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/click/termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:25:35.374669 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 164.82643, "process_in_blocks": "0", "process_kernel_time": 0.582639, "process_mem_max_rss": "95825920", "process_out_blocks": "0", "process_user_time": 2.014958}
+[0m14:25:35.375727 [debug] [MainThread]: Command `dbt init` failed at 14:25:35.375486 after 164.83 seconds
+[0m14:25:35.376738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11267cb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128ff710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128e8860>]}
+[0m14:25:35.379324 [debug] [MainThread]: Flushing usage events
+[0m14:25:36.742370 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:25:45.970728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e429f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089a4710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089a4410>]}
+
+
+============================== 14:25:45.980080 | b7639d9a-0d72-4c76-aba2-7a187dd17598 ==============================
+[0m14:25:45.980080 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:25:45.981091 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/meowrissa/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init brazilian_ecommerce_team_3', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:25:46.007900 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:25:46.024089 [info ] [MainThread]: 
+Your new dbt project "brazilian_ecommerce_team_3" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:25:46.024812 [info ] [MainThread]: Setting up your profile.
+[0m14:28:15.267965 [info ] [MainThread]: Profile brazilian_ecommerce_team_3 written to /Users/meowrissa/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:28:15.280304 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 149.42142, "process_in_blocks": "0", "process_kernel_time": 1.375557, "process_mem_max_rss": "329613312", "process_out_blocks": "0", "process_user_time": 5.24903}
+[0m14:28:15.289274 [debug] [MainThread]: Command `dbt init` succeeded at 14:28:15.288766 after 149.43 seconds
+[0m14:28:15.291408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089a44d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122ae02f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122ae2780>]}
+[0m14:28:15.292902 [debug] [MainThread]: Flushing usage events
+[0m14:28:16.435647 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:28:30.002043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7c0200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d15e870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d2b42c0>]}
+
+
+============================== 14:28:30.010878 | 3607b501-b5f8-4c74-9753-40d8a05b9cfa ==============================
+[0m14:28:30.010878 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:28:30.011878 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/meowrissa/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:28:30.040618 [info ] [MainThread]: dbt version: 1.9.4
+[0m14:28:30.041169 [info ] [MainThread]: python version: 3.12.8
+[0m14:28:30.041726 [info ] [MainThread]: python path: /usr/local/bin/python3
+[0m14:28:30.042357 [info ] [MainThread]: os info: macOS-12.7.6-x86_64-i386-64bit
+[0m14:28:34.230406 [info ] [MainThread]: Using profiles dir at /Users/meowrissa/.dbt
+[0m14:28:34.231048 [info ] [MainThread]: Using profiles.yml file at /Users/meowrissa/.dbt/profiles.yml
+[0m14:28:34.231537 [info ] [MainThread]: Using dbt_project.yml file at /Users/meowrissa/Documents/GitHub/Brazilian-E-Commerce-Team-3/dbt_project.yml
+[0m14:28:34.232075 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:28:34.236117 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.3377995, "process_in_blocks": "0", "process_kernel_time": 1.031465, "process_mem_max_rss": "335704064", "process_out_blocks": "0", "process_user_time": 5.080254}
+[0m14:28:34.237061 [debug] [MainThread]: Command `dbt debug` failed at 14:28:34.236900 after 4.34 seconds
+[0m14:28:34.237628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d2b4620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce16d80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1275c2000>]}
+[0m14:28:34.238245 [debug] [MainThread]: Flushing usage events
+[0m14:28:35.233125 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:35:21.864088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b074fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7bca40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7bc740>]}
+
+
+============================== 14:35:21.872701 | 98490421-c594-4119-bf99-f7f48b70fdc2 ==============================
+[0m14:35:21.872701 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:35:21.873660 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/meowrissa/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:35:21.902026 [info ] [MainThread]: dbt version: 1.9.4
+[0m14:35:21.902582 [info ] [MainThread]: python version: 3.12.8
+[0m14:35:21.903059 [info ] [MainThread]: python path: /usr/local/bin/python3
+[0m14:35:21.903503 [info ] [MainThread]: os info: macOS-12.7.6-x86_64-i386-64bit
+[0m14:35:26.576447 [info ] [MainThread]: Using profiles dir at /Users/meowrissa/.dbt
+[0m14:35:26.578473 [info ] [MainThread]: Using profiles.yml file at /Users/meowrissa/.dbt/profiles.yml
+[0m14:35:26.579058 [info ] [MainThread]: Using dbt_project.yml file at /Users/meowrissa/Documents/GitHub/Brazilian-E-Commerce-Team-3/dbt_project.yml
+[0m14:35:26.579627 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:35:26.582628 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.825003, "process_in_blocks": "0", "process_kernel_time": 1.211415, "process_mem_max_rss": "335699968", "process_out_blocks": "0", "process_user_time": 5.14827}
+[0m14:35:26.583577 [debug] [MainThread]: Command `dbt debug` failed at 14:35:26.583413 after 4.83 seconds
+[0m14:35:26.584080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b4bbec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b75f8c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125a17dd0>]}
+[0m14:35:26.584593 [debug] [MainThread]: Flushing usage events
+[0m14:35:27.880133 [debug] [MainThread]: An error was encountered while trying to flush usage events

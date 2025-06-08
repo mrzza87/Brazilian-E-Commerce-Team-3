@@ -18,6 +18,10 @@ payments as (
     select * from {{ source('BET_Team3', 'order_payments') }}
 ),
 
+reviews as (
+    select * from {{ source('BET_Team3', 'order_reviews') }}
+),
+
 final as (
     select
         o.order_id,
@@ -38,12 +42,13 @@ final as (
         oi.freight_value,
         pay.payment_type,
         pay.payment_value,
-        null as review_score  -- removed 'r.review_score'
+        r.review_score
     from order_items oi
     join orders o on o.order_id = oi.order_id
     join products p on p.product_id = oi.product_id
     join sellers s on s.seller_id = oi.seller_id
     left join payments pay on pay.order_id = o.order_id
+    left join reviews r on r.order_id = o.order_id
 )
 
 select * from final

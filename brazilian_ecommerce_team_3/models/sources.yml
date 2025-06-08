@@ -1,5 +1,3 @@
-version: 2
-
 sources:
   - name: BET_Team3
     database: brazilian-e-commerce-team-3
@@ -12,3 +10,4 @@ sources:
       - name: orders
       - name: order_payments
       - name: geolocation
+      - name: order_reviews  

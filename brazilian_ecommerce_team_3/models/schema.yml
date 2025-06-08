@@ -104,3 +104,23 @@ models:
         tests: [not_null]
       - name: payment_installments
         description: "Number of installments"
+
+  - name: dim_order_reviews
+    description: "Customer reviews for orders"
+    columns:
+      - name: review_id
+        description: "Primary key"
+        tests: [unique, not_null]
+      - name: order_id
+        description: "Foreign key to fact_sales"
+        tests: [not_null]
+      - name: review_score
+        description: "Score from 1 to 5"
+      - name: review_comment_title
+        description: "Short title of the review"
+      - name: review_comment_message
+        description: "Full review comment"
+      - name: review_creation_date
+        description: "Date when the review was created"
+      - name: review_answer_timestamp
+        description: "Timestamp when the seller responded"

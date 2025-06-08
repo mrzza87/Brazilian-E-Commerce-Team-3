@@ -158,3 +158,40 @@ Runtime Error
 [0m14:32:41.238307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077dc440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10794b560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d80650>]}
 [0m14:32:41.238834 [debug] [MainThread]: Flushing usage events
 [0m14:32:42.467519 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:13:32.295014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0bc7878fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0bc6a25f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0bc6a25f00>]}
+
+
+============================== 15:13:32.299543 | 819f679d-7341-4926-8ca0-a52690e86e9b ==============================
+[0m15:13:32.299543 [info ] [MainThread]: Running with dbt=1.9.2
+[0m15:13:32.300357 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/yogan/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:13:32.335588 [info ] [MainThread]: dbt version: 1.9.2
+[0m15:13:32.336206 [info ] [MainThread]: python version: 3.10.17
+[0m15:13:32.336966 [info ] [MainThread]: python path: /home/yogan/miniconda3/envs/dwh/bin/python3.10
+[0m15:13:32.337719 [info ] [MainThread]: os info: Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m15:13:33.665752 [info ] [MainThread]: Using profiles dir at /home/yogan/.dbt
+[0m15:13:33.666684 [info ] [MainThread]: Using profiles.yml file at /home/yogan/.dbt/profiles.yml
+[0m15:13:33.667433 [info ] [MainThread]: Using dbt_project.yml file at /home/yogan/Brazilian-E-Commerce-Team-3/dbt_project.yml
+[0m15:13:33.668321 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:13:33.671487 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.4689397, "process_in_blocks": "258328", "process_kernel_time": 0.439355, "process_mem_max_rss": "194124", "process_out_blocks": "16", "process_user_time": 2.43187}
+[0m15:13:33.672663 [debug] [MainThread]: Command `dbt debug` failed at 15:13:33.672458 after 1.47 seconds
+[0m15:13:33.673268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0bc7878fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0bc69c7f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b0bc69c41f0>]}
+[0m15:13:33.673826 [debug] [MainThread]: Flushing usage events
+[0m15:13:34.785977 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:15:19.570930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741fa9878f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741fa8a36050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741fa8a35ff0>]}
+
+
+============================== 15:15:19.574091 | 7bf42898-8f66-4320-b30e-836a1ee58d4e ==============================
+[0m15:15:19.574091 [info ] [MainThread]: Running with dbt=1.9.2
+[0m15:15:19.576325 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/home/yogan/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m15:15:19.577167 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/yogan/Brazilian-E-Commerce-Team-3/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:15:19.578429 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.072151944, "process_in_blocks": "0", "process_kernel_time": 0.130404, "process_mem_max_rss": "92748", "process_out_blocks": "8", "process_user_time": 1.37692}
+[0m15:15:19.579107 [debug] [MainThread]: Command `dbt run` failed at 15:15:19.578935 after 0.07 seconds
+[0m15:15:19.580038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741fa9878f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741fa8a36350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741fa8a36050>]}
+[0m15:15:19.580955 [debug] [MainThread]: Flushing usage events
+[0m15:15:20.687910 [debug] [MainThread]: An error was encountered while trying to flush usage events

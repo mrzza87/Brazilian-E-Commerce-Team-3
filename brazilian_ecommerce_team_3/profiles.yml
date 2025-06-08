@@ -8,4 +8,5 @@ brazilian_ecommerce_team_3:
       dataset: BET_Team3
       threads: 1
       location: US
-      keyfile: /Users/meowrissa/Documents/GitHub/Brazilian-E-Commerce-Team-3/brazilian-e-commerce-team-3-f5654e7ebd43.json
+      keyfile: /home/yogan/Brazilian-E-Commerce-Team-3/brazilian_ecommerce_team_3/keys/brazilian-e-commerce-team-3-f5654e7ebd43.json
+      

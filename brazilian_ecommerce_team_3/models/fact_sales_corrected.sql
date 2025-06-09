@@ -1,13 +1,13 @@
 with order_items as (
-    select * from {{ source('BET_Team3', 'order_items') }}
+    select * from {{ source('BET_Team3', 'order_items_corrected') }}
 ),
 
 orders as (
-    select * from {{ source('BET_Team3', 'orders') }}
+    select * from {{ source('BET_Team3', 'orders_corrected') }}
 ),
 
 products as (
-    select * from {{ source('BET_Team3', 'products') }}
+    select * from {{ source('BET_Team3', 'products_corrected') }}
 ),
 
 sellers as (

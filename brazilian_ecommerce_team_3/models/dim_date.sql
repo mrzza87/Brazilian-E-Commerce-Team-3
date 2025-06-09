@@ -1,7 +1,7 @@
 with raw_dates as (
     select distinct
         date(order_purchase_timestamp) as date_id
-    from {{ source('BET_Team3', 'orders') }}
+    from {{ source('BET_Team3', 'orders_corrected') }}
 ),
 
 final as (

@@ -114,7 +114,7 @@ models:
       - name: time_hhmm
         description: "Formatted time string (HH:MM)"
 
-  - name: fact_sales
+  - name: fact_sales_corrected
     description: "Fact table containing individual sales transactions"
     columns:
       - name: order_id

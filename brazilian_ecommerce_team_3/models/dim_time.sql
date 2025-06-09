@@ -1,18 +1,18 @@
 with times as (
     select distinct cast(order_purchase_timestamp as timestamp) as time
-    from {{ source('BET_Team3', 'orders') }}
+    from {{ source('BET_Team3', 'orders_corrected') }}
     union distinct
     select distinct cast(order_approved_at as timestamp) as time
-    from {{ source('BET_Team3', 'orders') }}
+    from {{ source('BET_Team3', 'orders_corrected') }}
     union distinct
     select distinct cast(order_delivered_carrier_date as timestamp) as time
-    from {{ source('BET_Team3', 'orders') }}
+    from {{ source('BET_Team3', 'orders_corrected') }}
     union distinct
     select distinct cast(order_delivered_customer_date as timestamp) as time
-    from {{ source('BET_Team3', 'orders') }}
+    from {{ source('BET_Team3', 'orders_corrected') }}
     union distinct
     select distinct cast(order_estimated_delivery_date as timestamp) as time
-    from {{ source('BET_Team3', 'orders') }}
+    from {{ source('BET_Team3', 'orders_corrected') }}
 ),
 final as (
     select

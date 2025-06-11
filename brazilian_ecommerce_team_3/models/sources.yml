@@ -9,5 +9,5 @@ sources:
       - name: order_items_corrected
       - name: orders_corrected
       - name: order_payments
-      - name: geolocation
+      - name: geolocation_version1
       - name: order_reviews  

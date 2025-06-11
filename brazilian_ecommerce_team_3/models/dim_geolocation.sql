@@ -5,7 +5,7 @@ with raw_geo as (
     geolocation_lng,
     geolocation_city,
     geolocation_state
-  from {{ source('BET_Team3', 'geolocation') }}
+  from {{ source('BET_Team3', 'geolocation_version1') }}
 )
 
 select * from raw_geo

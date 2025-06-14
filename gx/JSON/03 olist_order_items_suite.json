@@ -1,0 +1,33 @@
+{
+  "expectation_suite_name": "gxe_03_olist_order_items_suite",
+  "expectations": [
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_item_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "order_item_id", 
+                           "min_value": 1, 
+                           "max_value": 30}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "seller_id"}},
+
+   {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "shipping_limit_date",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "price", 
+                           "min_value": 0, 
+                           "max_value": 10000}},
+
+     {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "freight_value", 
+                           "min_value": 0, 
+                           "max_value": 1000}}                        
+  ]
+}

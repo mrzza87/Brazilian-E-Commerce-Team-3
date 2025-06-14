@@ -17,4 +17,4 @@ Calls on the functions in (2) to build the expression suite for running the vali
 Uses tables in bigquery://brazilian-e-commerce-team-3/BET_Team3 to run validation.
 
 (4) Outputs will be displayed at file:///../gx/uncommitted/data_docs/local_site/index.html
-(refer to the Data Docs folder)
+(refer to the Data_Docs_Site folder)

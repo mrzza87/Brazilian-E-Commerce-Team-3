@@ -1,0 +1,29 @@
+{
+  "expectation_suite_name": "gxe_04_olist_order_payments_suite",
+  "expectations": [
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "payment_sequential", 
+                           "min_value": 1, 
+                           "max_value": 48}},
+                           
+    {"expectation_type": "ExpectColumnValuesToBeInSet", 
+               "kwargs": {"column": "payment_type", 
+                          "value_set": "['boleto','canceled','credit_card', 'debit_card', 'voucher', 'not_defined']",
+                          "mostly": "0.8"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "payment_installments", 
+                           "min_value": 0, 
+                           "max_value": 48}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "payment_value", 
+                           "min_value": 0, 
+                           "max_value": 20000}}
+
+  ]
+}

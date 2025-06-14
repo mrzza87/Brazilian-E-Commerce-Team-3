@@ -32,19 +32,31 @@ models:
         description: "Month name"
 
   - name: dim_geolocation
-    description: "Geographic dimension by zip code"
+    description: "Cleaned geographic dimension with surrogate key"
     columns:
+      - name: surrogate_key
+        description: "Surrogate primary key"
+        tests:
+          - not_null
+          - unique
+
       - name: geolocation_zip_code_prefix
-        description: "Primary key"
-        tests: [not_null]
+        description: "Zip code prefix for location"
+        tests:
+          - not_null
+
       - name: geolocation_lat
         description: "Latitude"
+
       - name: geolocation_lng
         description: "Longitude"
+
       - name: geolocation_city
-        description: "City"
+        description: "City name (cleaned, lowercase)"
+
       - name: geolocation_state
-        description: "State"
+        description: "State code (uppercase)"
+
 
   - name: dim_order_reviews
     description: "Customer reviews for orders"

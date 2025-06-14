@@ -1,0 +1,3 @@
+List of JSON files with the GX expression and validation conditions for each of the Olist table.
+The JSON files are ingested by gxe_emitter.py which create the module containing the function that will called to update the 
+expression suite.

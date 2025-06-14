@@ -1,0 +1,38 @@
+{
+  "expectation_suite_name": "gxe_02_olist_orders_suite",
+  "expectations": [
+    {"expectation_type": "ExpectColumnValuesToBeUnique", 
+               "kwargs": {"column": "order_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "customer_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeInSet", 
+               "kwargs": {"column": "order_status", 
+                          "value_set": "['approved','canceled','created', 'delivered', 'invoiced','processing','shipped','unavailable']",
+                          "mostly": "0.8"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_purchase_timestamp",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_approved_at",
+                           "type_": "TIMESTAMP"}},
+                           
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_delivered_carrier_date",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_delivered_customer_date",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_estimated_delivery_date",
+                           "type_": "TIMESTAMP"}}
+  ]
+}

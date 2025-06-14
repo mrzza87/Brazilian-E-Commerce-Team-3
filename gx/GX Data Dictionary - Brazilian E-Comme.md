@@ -24,14 +24,23 @@ This document explains the tables and columns used in our e-commerce data wareho
 - `order_estimated_delivery_date`: Expected delivery (GX: Timestamp  format)
 
 order_status
+
 approved           2
+
 canceled         625
+
 created            5
+
 delivered      96478
+
 invoiced         314
+
 processing       301
+
 shipped         1107
+
 unavailable      609
+
 
 ---
 
@@ -54,11 +63,17 @@ unavailable      609
 - `payment_value`: Amount paid (GX: 0-20000; max: 13664.08)
 
 payment_type
+
 boleto         19784
+
 credit_card    76795
+
 debit_card      1529
+
 not_defined        3
+
 voucher         5775
+
 
 ---
 

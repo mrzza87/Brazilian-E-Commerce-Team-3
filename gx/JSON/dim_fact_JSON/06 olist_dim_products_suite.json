@@ -1,0 +1,48 @@
+{
+  "expectation_suite_name": "gxe_06_olist_dim_products_suite",
+  "expectations": [
+    {"expectation_type": "ExpectColumnValuesToBeUnique", 
+               "kwargs": {"column": "product_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "product_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "product_category_name"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+               "kwargs": {"column": "product_name_length", 
+                          "min_value": 1, 
+                          "max_value": 100}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "product_description_length", 
+                           "min_value": 1, 
+                           "max_value": 4000}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "product_photos_qty", 
+                           "min_value": 0, 
+                           "max_value": 25}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "product_weight_g", 
+                           "min_value": 0, 
+                           "max_value": 50000}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "product_length_cm", 
+                           "min_value": 0, 
+                           "max_value": 200}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "product_height_cm", 
+                           "min_value": 0, 
+                           "max_value": 200}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "product_width_cm", 
+                           "min_value": 0, 
+                           "max_value": 200}}
+  ]
+}

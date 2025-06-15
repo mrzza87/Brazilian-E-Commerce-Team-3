@@ -1,0 +1,22 @@
+{
+  "expectation_suite_name": "gxe_03_olist_dim_time_suite",
+  "expectations": [
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "time_id",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "hour", 
+                           "min_value": 0, 
+                           "max_value": 23}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "minute", 
+                           "min_value": 0, 
+                           "max_value": 59}},
+
+    {"expectation_type": "ExpectColumnValuesToMatchRegex", 
+               "kwargs": {"column": "time_hhmm", 
+                          "regex": "^\\d{2}:\\d{2}$"}}
+  ]
+}

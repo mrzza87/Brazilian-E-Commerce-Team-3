@@ -1,0 +1,26 @@
+{
+  "expectation_suite_name": "gxe_08_olist_dim_geolocation_suite",
+  "expectations": [
+    {"expectation_type": "ExpectColumnValuesToBeUnique", 
+               "kwargs": {"column": "surrogate_key"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "surrogate_key"}},
+
+    {"expectation_type": "ExpectColumnValuesToMatchRegex", 
+               "kwargs": {"column": "geolocation_zip_code_prefix", 
+                          "regex": "^\\d{5}$"}},
+
+    {"expectation_type": "ExpectColumnToExist", 
+                "kwargs": {"column": "geolocation_lat"}},
+
+    {"expectation_type": "ExpectColumnToExist", 
+                "kwargs": {"column": "geolocation_lng"}},
+
+    {"expectation_type": "ExpectColumnToExist", 
+                "kwargs": {"column": "geolocation_city"}},
+                
+    {"expectation_type": "ExpectColumnToExist", 
+                "kwargs": {"column": "geolocation_state"}}
+  ]
+}

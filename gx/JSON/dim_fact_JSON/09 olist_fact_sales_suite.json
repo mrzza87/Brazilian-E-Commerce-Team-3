@@ -1,0 +1,76 @@
+{
+  "expectation_suite_name": "gxe_09_olist_fact_sales_suite",
+  "expectations": [
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_item_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "order_item_id", 
+                           "min_value": 1, 
+                           "max_value": 30}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "customer_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "product_id"}},
+ 
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "seller_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeInSet", 
+               "kwargs": {"column": "order_status", 
+                          "value_set": "['approved','canceled','created', 'delivered', 'invoiced','processing','shipped','unavailable']",
+                          "mostly": "0.8"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_purchase_timestamp",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_approved_at",
+                           "type_": "TIMESTAMP"}},
+                           
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_delivered_carrier_date",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_delivered_customer_date",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "order_estimated_delivery_date",
+                           "type_": "TIMESTAMP"}},
+    
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "price", 
+                           "min_value": 0, 
+                           "max_value": 10000}}, 
+                           
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "freight_value", 
+                           "min_value": 0, 
+                           "max_value": 1000}},  
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "payment_value", 
+                           "min_value": 0, 
+                           "max_value": 20000}},
+
+    {"expectation_type": "ExpectColumnValuesToBeInSet", 
+               "kwargs": {"column": "payment_type", 
+                          "value_set": "['boleto','canceled','credit_card', 'debit_card', 'voucher', 'not_defined']",
+                          "mostly": "0.8"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "review_score", 
+                           "min_value": 1, 
+                           "max_value": 5}}
+
+  ]
+}

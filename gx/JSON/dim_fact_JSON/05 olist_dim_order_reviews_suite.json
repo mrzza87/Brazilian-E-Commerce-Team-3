@@ -1,0 +1,36 @@
+{
+  "expectation_suite_name": "gxe_05_olist_dim_order_reviews_suite",
+  "expectations": [
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "review_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToNotBeNull", 
+               "kwargs": {"column": "order_id_review_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeUnique", 
+               "kwargs": {"column": "order_id_review_id"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "review_score", 
+                           "min_value": 1, 
+                           "max_value": 5}},
+                           
+    {"expectation_type": "ExpectColumnToExist", 
+                "kwargs": {"column": "review_comment_title"}},
+
+    {"expectation_type": "ExpectColumnToExist", 
+                "kwargs": {"column": "review_comment_message"}},
+    
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "review_creation_date",
+                           "type_": "TIMESTAMP"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "review_answer_timestamp",
+                           "type_": "TIMESTAMP"}}
+
+  ]
+}

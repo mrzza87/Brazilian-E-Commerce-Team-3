@@ -92,15 +92,13 @@ This documentation outlines the architecture, tools, and processes used in devel
 - **Justification**:
   - Built-in testing framework with declarative syntax
   - Ensures schema integrity (e.g. primary keys not null, no duplicates)
-  - `GE` Documentation is a work in progress
+  - `GE` completed and available at https://github.com/mrzza87/Brazilian-E-Commerce-Team-3/tree/main-clean/gx
 
 **Tests Written**:
 
 *Status: Ongoing*
 - `not_null` and `unique` for all primary keys
-- Sanity checks on foreign keys
-- Documentation to be completed later.
-- 
+- Addition details published at https://github.com/mrzza87/Brazilian-E-Commerce-Team-3/blob/1dbdc77b17905cb1472b8a944e126e1a2cfb2ced/gx/GX%20Data%20Dictionary%20-%20Brazilian%20E-Comme.md
 ---
 
 ### 3. Pipeline Architecture Diagram

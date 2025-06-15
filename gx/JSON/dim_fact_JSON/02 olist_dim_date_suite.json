@@ -1,0 +1,33 @@
+{
+  "expectation_suite_name": "gxe_02_olist_dim_date_suite",
+  "expectations": [
+    {"expectation_type": "ExpectColumnValuesToBeOfType", 
+                "kwargs": {"column": "date_id",
+                           "type_": "DATE"}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "year", 
+                           "min_value": 2000, 
+                           "max_value": 2030}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "month", 
+                           "min_value": 1, 
+                           "max_value": 12}},
+
+    {"expectation_type": "ExpectColumnValuesToBeBetween", 
+                "kwargs": {"column": "day", 
+                           "min_value": 1, 
+                           "max_value": 31}},
+
+    {"expectation_type": "ExpectColumnValuesToBeInSet", 
+               "kwargs": {"column": "day_name", 
+                          "value_set": "['Monday','Tuesday','Wednesday', 'Thursday', 'Friday','Saturday','Sunday']",
+                          "mostly": "0.9"}},  
+                          
+    {"expectation_type": "ExpectColumnValuesToBeInSet", 
+               "kwargs": {"column": "month_name", 
+                          "value_set": "['January','February','March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']",
+                          "mostly": "0.9"}}
+  ]
+}

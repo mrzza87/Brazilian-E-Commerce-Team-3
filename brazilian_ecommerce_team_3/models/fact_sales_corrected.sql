@@ -1,54 +1,61 @@
-with order_items as (
-    select * from {{ source('BET_Team3', 'order_items_corrected') }}
+WITH order_items AS (
+    SELECT * FROM {{ source('BET_Team3', 'order_items_corrected') }}
 ),
 
-orders as (
-    select * from {{ source('BET_Team3', 'orders_corrected') }}
+orders AS (
+    SELECT * FROM {{ source('BET_Team3', 'orders_corrected') }}
 ),
 
-products as (
-    select * from {{ source('BET_Team3', 'products_corrected') }}
+products AS (
+    SELECT * FROM {{ source('BET_Team3', 'products_corrected') }}
 ),
 
-sellers as (
-    select * from {{ source('BET_Team3', 'sellers') }}
+sellers AS (
+    SELECT * FROM {{ source('BET_Team3', 'sellers') }}
 ),
 
-payments as (
-    select * from {{ source('BET_Team3', 'order_payments') }}
+payments AS (
+    SELECT * FROM {{ source('BET_Team3', 'order_payments') }}
 ),
 
-reviews as (
-    select * from {{ source('BET_Team3', 'order_reviews') }}
+reviews AS (
+    SELECT * FROM {{ source('BET_Team3', 'order_reviews') }}
 ),
 
-final as (
-    select
+joined_data AS (
+    SELECT
         o.order_id,
-        oi.order_item_id,
-        o.customer_id,
-        oi.product_id,
+        o.order_item_id,
+        ord.customer_id,
+        o.product_id,
         p.product_category_name,
-        oi.seller_id,
+        s.seller_id,
         s.seller_city,
         s.seller_state,
-        o.order_status,
-        o.order_purchase_timestamp,
-        o.order_approved_at,
-        o.order_delivered_carrier_date,
-        o.order_delivered_customer_date,
-        o.order_estimated_delivery_date,
-        oi.price,
-        oi.freight_value,
+        ord.order_status,
+        ord.order_purchase_timestamp,
+        ord.order_approved_at,
+        ord.order_delivered_carrier_date,
+        ord.order_delivered_customer_date,
+        ord.order_estimated_delivery_date,
+        o.price,
+        o.freight_value,
         pay.payment_type,
         pay.payment_value,
-        r.review_score
-    from order_items oi
-    join orders o on o.order_id = oi.order_id
-    join products p on p.product_id = oi.product_id
-    join sellers s on s.seller_id = oi.seller_id
-    left join payments pay on pay.order_id = o.order_id
-    left join reviews r on r.order_id = o.order_id
+        r.review_score,
+        ROW_NUMBER() OVER (
+            PARTITION BY o.order_id, o.order_item_id
+            ORDER BY ord.order_purchase_timestamp DESC
+        ) AS row_num
+    FROM order_items o
+    JOIN orders         ord ON o.order_id = ord.order_id
+    JOIN products       p   ON o.product_id = p.product_id
+    JOIN sellers        s   ON o.seller_id = s.seller_id
+    LEFT JOIN payments  pay ON pay.order_id = o.order_id
+    LEFT JOIN reviews   r   ON r.order_id = o.order_id
 )
 
-select * from final
+SELECT *
+FROM joined_data
+WHERE row_num = 1
+

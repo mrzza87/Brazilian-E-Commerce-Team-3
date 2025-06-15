@@ -5,10 +5,10 @@ models:
     description: "Customer dimension with city and state"
     columns:
       - name: customer_id
-        description: "Primary key"
+        description: "Primary key - unique identifier for customer"
         tests: [unique, not_null]
       - name: customer_unique_id
-        description: "Unique identifier for the customer"
+        description: "Anonymized customer ID"
       - name: customer_city
         description: "City of the customer"
       - name: customer_state
@@ -59,48 +59,54 @@ models:
 
 
   - name: dim_order_reviews
-    description: "Customer reviews for orders"
+    description: "Dimension table for customer order reviews"
     columns:
-      - name: order_id_review_id
-        description: "Composite primary key"
-        tests: [unique, not_null]
-      - name: review_id
-        description: "Review ID"
-        tests: [not_null]
-      - name: order_id
-        description: "Order ID"
-        tests: [not_null]
-      - name: review_score
-        description: "Score from 1 to 5"
-      - name: review_comment_title
-        description: "Short title"
-      - name: review_comment_message
-        description: "Full comment"
-      - name: review_creation_date
-        description: "Date of creation"
-      - name: review_answer_timestamp
-        description: "Seller response timestamp"
+    - name: review_id
+      description: "Review ID"
+      tests:
+        - not_null
+    - name: order_id
+      description: "Foreign key to fact_sales_corrected"
+      tests:
+        - not_null
+    - name: order_id_review_id
+      description: "Composite key of order and review"
+      tests:
+        - unique
+        - not_null
+
+    - name: review_score
+      description: "Score from 1 to 5"
+    - name: review_comment_title
+      description: "Short title"
+    - name: review_comment_message
+      description: "Full comment"
+    - name: review_creation_date
+      description: "Date of creation"
+    - name: review_answer_timestamp
+      description: "Seller response timestamp"
+
 
   - name: dim_payments
-    description: "Payments dimension table"
+    description: "Payment method and value per order"
     columns:
       - name: order_id
-        description: "Order ID"
+        description: "Order identifier"
         tests: [not_null]
       - name: payment_type
-        description: "Type of payment"
+        description: "Type of payment used"
         tests: [not_null]
       - name: payment_installments
         description: "Number of installments"
 
   - name: dim_products
-    description: "Product dimension with category name"
+    description: "Product dimension table with product ID and category"
     columns:
       - name: product_id
-        description: "Primary key"
+        description: "Primary key for product dimension"
         tests: [unique, not_null]
       - name: product_category_name
-        description: "Product category"
+        description: "Category of the product"
 
   - name: dim_sellers
     description: "Seller dimension with city and state"
@@ -127,13 +133,13 @@ models:
         description: "Formatted time string (HH:MM)"
 
   - name: fact_sales_corrected
-    description: "Fact table containing individual sales transactions"
+    description: "Fact table containing individual sales transactions. Composite primary key: (order_id, order_item_id)"
     columns:
       - name: order_id
-        description: "Unique ID for the order"
+        description: "Part of the composite primary key (with order_item_id"
         tests: [not_null]
       - name: order_item_id
-        description: "Item-level granularity"
+        description: "Part of the composite primary key (with order_item_id"
         tests: [not_null]
       - name: customer_id
         description: "Foreign key to dim_customers"
@@ -166,3 +172,8 @@ models:
         description: "Total payment value"
       - name: review_score
         description: "Customer review score"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - order_id
+            - order_item_id

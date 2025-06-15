@@ -32,6 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   brazilian_ecommerce_team_3:
     staging:
-      +materialized: view        # for raw/staging layer (lightweight, fast builds)
+      +materialized: view
     marts:
-      +materialized: table       # for fact/dim models used in dashboards
+      +materialized: table
+    dim_geolocation:
+      +materialized: table   # 👈 override specifically for this model

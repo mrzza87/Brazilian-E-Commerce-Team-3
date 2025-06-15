@@ -104,9 +104,18 @@ models:
     columns:
       - name: product_id
         description: "Primary key for product dimension"
-        tests: [unique, not_null]
+        tests:
+          - unique
+          - not_null
       - name: product_category_name
         description: "Category of the product"
+      - name: product_name_length
+        description: "Length of the product name"
+      - name: product_description_length
+        description: "Length of the product description"
+      - name: product_photos_qty
+        description: "Number of product photos"
+
 
   - name: dim_sellers
     description: "Seller dimension with city and state"
@@ -118,6 +127,11 @@ models:
         description: "City of the seller"
       - name: seller_state
         description: "State of the seller"
+      - name: seller_zip_code_prefix
+        description: "ZIP code prefix of the seller"
+        tests:
+          - not_null
+
 
   - name: dim_time
     description: "Time dimension extracted from various order timestamps"

@@ -42,6 +42,7 @@ joined_data AS (
         o.freight_value,
         pay.payment_type,
         pay.payment_value,
+        pay.payment_sequential,
         r.review_score,
         ROW_NUMBER() OVER (
             PARTITION BY o.order_id, o.order_item_id

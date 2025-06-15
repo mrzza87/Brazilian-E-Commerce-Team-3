@@ -205,6 +205,8 @@ models:
         description: "Total payment value"
       - name: review_score
         description: "Customer review score"
+      - name: payment_sequential
+        description: "The sequence number of the payment within the order (e.g., 1st, 2nd)"
     tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:

@@ -1,0 +1,7 @@
+Contains all the .py files for command line execution to validate datasets and dime/fact tables.
+gx_olist_validation.py : main library of all the functions require for run_checkpoint which takes in 
+(1) target table name
+(2) module name of the expectation suite builder function and 
+(3) name of the expectation suite builder
+dim_fact_validation.py : sets the target dim and fact table, module and function for building the expectation suite
+before calling run_checkpoint to validate the target table.  Validation results will be shown on the Data_Docs_Site.

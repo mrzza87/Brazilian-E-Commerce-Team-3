@@ -13,6 +13,10 @@ models:
         description: "City of the customer"
       - name: customer_state
         description: "State of the customer"
+      - name: customer_zip_code_prefix
+        description: "ZIP code prefix of the customer"
+        tests:
+          - not_null
 
   - name: dim_date
     description: "Date dimension extracted from order timestamps"
@@ -100,21 +104,36 @@ models:
         description: "Number of installments"
 
   - name: dim_products
-    description: "Product dimension table with product ID and category"
+    description: "Product dimension table with product details"
     columns:
       - name: product_id
-        description: "Primary key for product dimension"
-        tests:
-          - unique
-          - not_null
+        description: "Primary key for product"
+        tests: [unique, not_null]
+
       - name: product_category_name
-        description: "Category of the product"
+        description: "Product category"
+
       - name: product_name_length
-        description: "Length of the product name"
+        description: "Length of product name"
+
       - name: product_description_length
-        description: "Length of the product description"
+        description: "Length of product description"
+
       - name: product_photos_qty
-        description: "Number of product photos"
+        description: "Number of product images"
+
+      - name: product_weight_g
+        description: "Weight in grams"
+
+      - name: product_length_cm
+        description: "Length in cm"
+
+      - name: product_height_cm
+        description: "Height in cm"
+
+      - name: product_width_cm
+        description: "Width in cm"
+
 
 
   - name: dim_sellers

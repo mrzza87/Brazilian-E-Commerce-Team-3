@@ -169,11 +169,12 @@ Following the project requirements, comprehensive data quality testing includes:
 Data quality tests are implemented using:
 
 - `dbt`'s built-in testing framework for schema validation
-- [Great Expectations](/gx/IPYNB/gx_olist_tables_validation.ipynb) integration for advanced data profiling
+- `Great Expectations` integration for advanced data profiling
+    - [/gx/IPYNB/gx_olist_tables_validation.ipynb](/gx/IPYNB/gx_olist_tables_validation.ipynb)
 
 
-![GX flowchart](/gx/GX-BET3(V1.1-11-Jun-2025).png)
 
+![GX flowchart](/gx/GX-BET3-result.jpg)
 
 ## 5. Pipeline Orchestration and Automation
 
@@ -207,7 +208,7 @@ Refer to [/notebooks/analysis_fact_sheet.ipynb](/notebooks/analysis_fact_sheet.i
 ### 6.1 Customer Behavior
 
 - [/notebooks/customer_behavior.ipynb](/notebooks/customer_behavior.ipynb)
--  [<------- insert executive takeaway here--------->] 
+-  High-value but dissatisfied customers drive disproportionate churn losses—targeted recovery and retention strategies could unlock $468K in annual revenue upside with just $72K investment. 
 
 ### 6.2 Geolocation Analysis
 

@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram name="E-Commerce Star Schema" id="0">
+    <mxGraphModel dx="1500" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="fact_sales_corrected&#xa;&#xa;- order_id, order_item_id (Composite PK)&#xa;- customer_id (FK)&#xa;- product_id (FK)&#xa;- product_category_name&#xa;- seller_id (FK)&#xa;- seller_city&#xa;- seller_state&#xa;- order_status&#xa;- order_purchase_timestamp&#xa;- order_approved_at&#xa;- order_delivered_carrier_date&#xa;- order_delivered_customer_date&#xa;- order_estimated_delivery_date&#xa;- price&#xa;- freight_value&#xa;- payment_type&#xa;- payment_value&#xa;- payment_sequential&#xa;- review_score&#xa;- row_num" style="rounded=1;whiteSpace=wrap;fillColor=#A9CCE3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="400" y="190" width="260" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="dim_customers&#xa;&#xa;- customer_id (PK)&#xa;- customer_unique_id&#xa;- customer_zip_code_prefix (FK)&#xa;- customer_city&#xa;- customer_state" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="40" y="90" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="dim_products&#xa;&#xa;- product_id (PK)&#xa;- product_category_name&#xa;- product_category_name_english&#xa;- product_name_length&#xa;- product_description_length&#xa;- product_photos_qty&#xa;- product_weight_g&#xa;- product_length_cm&#xa;- product_height_cm&#xa;- product_width_cm" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="810" y="40" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="dim_sellers&#xa;&#xa;- seller_id (PK)&#xa;- seller_zip_code_prefix (FK)&#xa;- seller_city&#xa;- seller_state" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="680" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="dim_date&#xa;&#xa;- date_id (PK)&#xa;- year&#xa;- month&#xa;- day&#xa;- day_name&#xa;- month_name" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="420" y="680" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="dim_time&#xa;&#xa;- time_id (PK)&#xa;- hour&#xa;- minute&#xa;- time_hhmm" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="710" y="700" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="dim_geolocation&#xa;&#xa;- surrogate_key (PK)&#xa;- geolocation_zip_code_prefix&#xa;- geolocation_lat&#xa;- geolocation_lng&#xa;- geolocation_city&#xa;- geolocation_state" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="360" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="dim_order_reviews&#xa;&#xa;- review_id (PK)&#xa;- order_id (FK)&#xa;- order_id_review_id&#xa;- review_score&#xa;- review_comment_title&#xa;- review_comment_message&#xa;- review_creation_date&#xa;- review_answer_timestamp" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="870" y="280" width="270" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="customer_id" style="endArrow=block;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="product_id" style="endArrow=block;" parent="1" source="2" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="seller_id" style="endArrow=block;" parent="1" source="2" target="5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="date_id" style="endArrow=block;" parent="1" source="2" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="time_id" style="endArrow=block;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="629.997435897436" y="540" as="sourcePoint" />
+            <mxPoint x="742.8179487179488" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="review_id" style="endArrow=block;" parent="1" source="2" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="zip_code_prefix" style="endArrow=block;" parent="1" source="3" target="8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="zip_code_prefix" style="endArrow=block;" parent="1" source="5" target="8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="order_id" style="endArrow=block;" parent="1" source="9" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OxSXXOki-j3TAp3wbUQ8-18" value="dim_payments&#xa;&#xa;- order_id (FK)&#xa;- payment_type&#xa;- payment_installments" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="900" y="520" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="OxSXXOki-j3TAp3wbUQ8-19" value="order_id" style="endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="OxSXXOki-j3TAp3wbUQ8-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="661" y="495" as="sourcePoint" />
+            <mxPoint x="871" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -51,7 +51,7 @@ The data pipeline follows an ELT (Extract, Load, Transform) approach, which has 
 
 **Orchestration**:
 
-- `Dagster` was intended to be deployed, but since there is low potential for additional data from Kaggle, orchestration as a whole is addressed in the Future Architecture portion***
+- `Dagster` was intended to be deployed, but since there is low potential for additional data from Kaggle, orchestration as a whole is addressed in the Future Architecture portion.
 
 
 ### 1.2 Data Lineage

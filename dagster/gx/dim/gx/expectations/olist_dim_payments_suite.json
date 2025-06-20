@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "id": "d06e3040-8700-4e48-8634-5106278a364e",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "b953f84f-34e5-4526-be53-9b747176f120",
+      "kwargs": {
+        "column": "payment_type",
+        "mostly": 0.9,
+        "value_set": [
+          "boleto",
+          "canceled",
+          "credit_card",
+          "debit_card",
+          "voucher",
+          "not_defined"
+        ]
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "ecf61b51-262b-4f31-8709-83e4aa071893",
+      "kwargs": {
+        "column": "payment_installments",
+        "max_value": 48.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "2d5958c3-7a49-46c1-9469-92a862db8d31",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_payments_suite",
+  "notes": null
+}

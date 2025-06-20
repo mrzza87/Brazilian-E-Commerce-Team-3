@@ -1,0 +1,14 @@
+[32m2025-06-20 17:21:16 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - 8748 - LOGS_CAPTURED - Started capturing logs in process (pid: 8748).
+[32m2025-06-20 17:21:16 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - 8748 - dbt_run - STEP_START - Started execution of step "dbt_run".
+/Users/luikk/miniconda3/envs/elt/lib/python3.10/site-packages/dbt/adapters/bigquery/connections.py:570: FutureWarning: job_retry must be explicitly set to None if job_id is set.
+BigQuery cannot retry a failed job by using the exact
+same ID. Setting job_id without explicitly disabling
+job_retry will raise an error in the future. To avoid this
+warning, either use job_id_prefix instead (preferred) or
+set job_retry=None.
+  query_job = client.query(
+[32m2025-06-20 17:21:30 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - 8748 - dbt_run - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-06-20 17:21:30 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - dbt_run - Writing file at: /Users/luikk/Brazilian-E-Commerce-Team-3-Org/GX/my_dagster_project/.tmp_dagster_home_5bghitb3/storage/dbt_run using PickledObjectFilesystemIOManager...
+[32m2025-06-20 17:21:30 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - 8748 - dbt_run - ASSET_MATERIALIZATION - Materialized value dbt_run.
+[32m2025-06-20 17:21:30 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - 8748 - dbt_run - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-06-20 17:21:30 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - f328bd9d-fa9d-4373-830a-19ecbd32cfbd - 8748 - dbt_run - STEP_SUCCESS - Finished execution of step "dbt_run" in 14.37s.

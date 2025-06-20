@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "367e61ea-f4b6-4255-931d-8f30a01a1132",
+      "name": "olist_products_corrected_asset"
+    },
+    "batch_definition": {
+      "id": "2cd5f116-299c-466a-b634-960cdad62b3b",
+      "name": "olist_products_corrected_batch_def_name"
+    },
+    "datasource": {
+      "id": "bfc60bdc-657f-49d3-933e-5a52b3cad2ff",
+      "name": "BQ_olist_products_corrected_datasource"
+    }
+  },
+  "id": "2f5ffd64-85ab-4d3a-8a74-5805d4797ae3",
+  "name": "BQ_products_corrected_validation_definition",
+  "suite": {
+    "id": "a7dbabf4-d9a8-426d-b326-9e7c0d4635a7",
+    "name": "olist_products_corrected_suite"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "f16518eb-f43e-43d9-943b-3ec03643b371",
+      "name": "olist_dim_geolocation_asset"
+    },
+    "batch_definition": {
+      "id": "43a24859-e332-4ef8-8a7a-e245b6d8c7eb",
+      "name": "olist_dim_geolocation_batch_def_name"
+    },
+    "datasource": {
+      "id": "5ec977ed-657c-451c-a550-9dfef3dc705b",
+      "name": "BQ_olist_dim_geolocation_datasource"
+    }
+  },
+  "id": "1da3fb64-46e3-4a40-95c6-acb169ad666f",
+  "name": "BQ_dim_geolocation_validation_definition",
+  "suite": {
+    "id": "894a91f6-57df-44a8-9c35-c3e00818005a",
+    "name": "olist_dim_geolocation_suite"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "expectations": [
+    {
+      "id": "519de2d9-189f-4090-97f1-828031ecbd97",
+      "kwargs": {
+        "column": "seller_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "5ca2c46d-becb-49fc-b2ea-9a00b8e88da7",
+      "kwargs": {
+        "column": "seller_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "70862d1c-9062-4900-a148-c7800fb0154a",
+      "kwargs": {
+        "column": "seller_zip_code_prefix",
+        "regex": "^\\d{5}$"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "86016d25-7f7d-4fcb-b1a4-716e142459c9",
+      "kwargs": {
+        "column": "seller_city"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "65e9ed72-610b-4598-9921-757f61574583",
+      "kwargs": {
+        "column": "seller_state"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    }
+  ],
+  "id": "341e9dbc-3a14-4cd6-a668-72370470e924",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_sellers_suite",
+  "notes": null
+}

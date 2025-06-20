@@ -1,0 +1,12 @@
+GX_DBT_Test:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: lkk-dsai
+      dataset: GX_DBT_Test
+      threads: 1
+      location: US
+      keyfile: /Users/luikk/Documents/lkk-dsai-78d67ac0d398.json
+      

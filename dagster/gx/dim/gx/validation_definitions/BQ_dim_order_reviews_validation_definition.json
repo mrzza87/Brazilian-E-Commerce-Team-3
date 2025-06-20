@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "200e4331-4f7c-4dbb-9cc8-6af4ad0e49b1",
+      "name": "olist_dim_order_reviews_asset"
+    },
+    "batch_definition": {
+      "id": "0fb7255b-3a82-451f-a3f6-62af12466d5c",
+      "name": "olist_dim_order_reviews_batch_def_name"
+    },
+    "datasource": {
+      "id": "a57f9565-7e6f-4ff4-95aa-93a1bfa2eb10",
+      "name": "BQ_olist_dim_order_reviews_datasource"
+    }
+  },
+  "id": "0ae4bef3-73ec-4cd5-bdab-e9e556ca7700",
+  "name": "BQ_dim_order_reviews_validation_definition",
+  "suite": {
+    "id": "5dd57655-a67e-4bbb-adab-a17737fa7a55",
+    "name": "olist_dim_order_reviews_suite"
+  }
+}

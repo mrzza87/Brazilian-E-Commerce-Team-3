@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "ddc45fe3-0871-4ebc-9b4e-c129e4dc3489",
+      "name": "olist_dim_sellers_asset"
+    },
+    "batch_definition": {
+      "id": "9acf7635-1609-4f37-a8cd-82e32a6463b1",
+      "name": "olist_dim_sellers_batch_def_name"
+    },
+    "datasource": {
+      "id": "1f22f88c-7d1c-46d6-9a6b-ddd275321da3",
+      "name": "BQ_olist_dim_sellers_datasource"
+    }
+  },
+  "id": "4c98eaeb-15b6-4e89-8260-3a2c6f9d726a",
+  "name": "BQ_dim_sellers_validation_definition",
+  "suite": {
+    "id": "341e9dbc-3a14-4cd6-a668-72370470e924",
+    "name": "olist_dim_sellers_suite"
+  }
+}

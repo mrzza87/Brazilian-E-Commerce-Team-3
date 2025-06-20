@@ -1,0 +1,32 @@
+version: 1
+default_environment: dev
+project_id: a9734c51-0457-4a9f-96e8-81b0b583572c
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files:
+        - entity: customer_100
+          path: /Users/luikk/desktop/project/customer_100.csv
+          keys: [customer_id]
+          elimiter: ","
+          encoding: "utf-8"
+          format: "csv"
+  loaders:
+  - name: target-bigquery
+    variant: z3z1ma
+    pip_url: git+https://github.com/z3z1ma/target-bigquery.git
+    config:
+      project: lkk-dsai
+      dataset: GX_Meltano_Test
+      credentials_path: /Users/luikk/documents/lkk-dsai-78d67ac0d398.json
+      method: batch_job
+      denormalized: true
+      flattening_enabled: true
+      flattening_max_depth: 1

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "2e48cf9d-d4d7-4dd4-a5b3-cedfebc498ec",
+      "name": "olist_dim_payments_asset"
+    },
+    "batch_definition": {
+      "id": "23e27b2e-a721-46ed-bcd4-bb81873ad8b0",
+      "name": "olist_dim_payments_batch_def_name"
+    },
+    "datasource": {
+      "id": "91822de1-7b66-4a28-9880-9cc3d4bf65e9",
+      "name": "BQ_olist_dim_payments_datasource"
+    }
+  },
+  "id": "eb3b9d09-7557-44fa-a3ea-92d3c72c49e2",
+  "name": "BQ_dim_payments_validation_definition",
+  "suite": {
+    "id": "2d5958c3-7a49-46c1-9469-92a862db8d31",
+    "name": "olist_dim_payments_suite"
+  }
+}

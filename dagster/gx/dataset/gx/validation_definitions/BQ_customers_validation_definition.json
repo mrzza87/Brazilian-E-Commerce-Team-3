@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "10330a0c-4d29-446f-9e8e-0d8f4f83bf6e",
+      "name": "olist_customers_asset"
+    },
+    "batch_definition": {
+      "id": "c170c65d-056b-4fe1-bcf2-a2181035f876",
+      "name": "olist_customers_batch_def_name"
+    },
+    "datasource": {
+      "id": "89d4cff4-965b-425d-9e0f-880b096f822b",
+      "name": "BQ_olist_customers_datasource"
+    }
+  },
+  "id": "d18f4964-514b-44c0-a5a7-d447bfb3b7a5",
+  "name": "BQ_customers_validation_definition",
+  "suite": {
+    "id": "0873ea06-d516-43ff-aa27-0c7fc50fdce6",
+    "name": "olist_customers_suite"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "id": "e8d1786f-98ca-45d6-b480-66696eb8fb1c",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "7997691c-1cd5-423f-bd79-70c39f5ef8bd",
+      "kwargs": {
+        "column": "payment_sequential",
+        "max_value": 48.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c31879b4-ee33-4ba3-9c99-8ec57a04f960",
+      "kwargs": {
+        "column": "payment_type",
+        "mostly": 0.8,
+        "value_set": [
+          "boleto",
+          "canceled",
+          "credit_card",
+          "debit_card",
+          "voucher",
+          "not_defined"
+        ]
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "c02a20c9-ed2c-42d6-8540-d708e8a6c395",
+      "kwargs": {
+        "column": "payment_installments",
+        "max_value": 48.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "a63d6582-5500-45b7-908f-bddae687d171",
+      "kwargs": {
+        "column": "payment_value",
+        "max_value": 20000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "ec16496f-7e8b-4683-a9db-28bb17545f0e",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_order_payments_suite",
+  "notes": null
+}

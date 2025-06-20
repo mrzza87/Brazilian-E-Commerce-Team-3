@@ -1,0 +1,191 @@
+{
+  "expectations": [
+    {
+      "id": "656bd83e-0dd1-4212-9768-5740935cd009",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "0a896e18-a3b4-4b5b-b3a9-26946f7a3447",
+      "kwargs": {
+        "column": "order_item_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "7935ad7d-90ad-486a-befe-f5ee4d12e563",
+      "kwargs": {
+        "column": "order_item_id",
+        "max_value": 30.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "90e1219a-39c7-4bea-85df-bea72798d298",
+      "kwargs": {
+        "column": "customer_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "aded9ca8-0181-40e6-9923-764af5eb466f",
+      "kwargs": {
+        "column": "product_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "b0748f72-1101-4645-9e43-760997a9e1b8",
+      "kwargs": {
+        "column": "seller_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "24645fd6-865a-4a2a-abf9-15a4944f704a",
+      "kwargs": {
+        "column": "order_status",
+        "mostly": 0.9,
+        "value_set": [
+          "approved",
+          "canceled",
+          "created",
+          "delivered",
+          "invoiced",
+          "processing",
+          "shipped",
+          "unavailable"
+        ]
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "e1d04ef9-0959-4a1d-9408-c24a7ae2ef4c",
+      "kwargs": {
+        "column": "order_purchase_timestamp",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "b4ef66fa-f186-4b05-b400-fa111b3e5f45",
+      "kwargs": {
+        "column": "order_approved_at",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "7c75c502-bc69-4189-b611-0e34e8469cd0",
+      "kwargs": {
+        "column": "order_delivered_carrier_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "27260e5e-8a8d-419b-b018-25dc8085fd49",
+      "kwargs": {
+        "column": "order_delivered_customer_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "55da2341-cee9-444f-97c0-72fccdf6acb6",
+      "kwargs": {
+        "column": "order_estimated_delivery_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "6e13104a-e828-447a-96ce-abefcca6600d",
+      "kwargs": {
+        "column": "price",
+        "max_value": 10000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "7ded9c36-9693-4181-8008-2da17254e137",
+      "kwargs": {
+        "column": "freight_value",
+        "max_value": 1000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8812a3ef-8ea2-4754-8def-2b5663f49819",
+      "kwargs": {
+        "column": "payment_value",
+        "max_value": 20000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "cac8c04d-571b-4f5e-acd1-47d42e85daca",
+      "kwargs": {
+        "column": "payment_type",
+        "mostly": 0.9,
+        "value_set": [
+          "boleto",
+          "canceled",
+          "credit_card",
+          "debit_card",
+          "voucher",
+          "not_defined"
+        ]
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "56083ed0-978b-4181-92d8-3a6c31bad807",
+      "kwargs": {
+        "column": "payment_sequential",
+        "max_value": 48.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "84371d48-66ab-409d-9ac6-1080314868a3",
+      "kwargs": {
+        "column": "review_score",
+        "max_value": 5.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "4b08bd16-59d4-44a4-b781-8c003d4dc10b",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_fact_sales_corrected_suite",
+  "notes": null
+}

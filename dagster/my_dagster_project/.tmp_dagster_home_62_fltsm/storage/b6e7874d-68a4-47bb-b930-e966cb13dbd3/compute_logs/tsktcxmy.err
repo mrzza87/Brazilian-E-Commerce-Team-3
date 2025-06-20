@@ -1,0 +1,8 @@
+[32m2025-06-20 19:20:50 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - 29482 - LOGS_CAPTURED - Started capturing logs in process (pid: 29482).
+[32m2025-06-20 19:20:50 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - 29482 - meltano_csv_to_bigquery - STEP_START - Started execution of step "meltano_csv_to_bigquery".
+[32m2025-06-20 19:21:05 +0800[0m - dagster - [34mINFO[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - meltano_csv_to_bigquery
+[32m2025-06-20 19:21:05 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - 29482 - meltano_csv_to_bigquery - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-06-20 19:21:05 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - meltano_csv_to_bigquery - Writing file at: /Users/luikk/Brazilian-E-Commerce-Team-3-Org/GX/my_dagster_project/.tmp_dagster_home_62_fltsm/storage/meltano_csv_to_bigquery using PickledObjectFilesystemIOManager...
+[32m2025-06-20 19:21:05 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - 29482 - meltano_csv_to_bigquery - ASSET_MATERIALIZATION - Materialized value meltano_csv_to_bigquery.
+[32m2025-06-20 19:21:05 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - 29482 - meltano_csv_to_bigquery - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-06-20 19:21:05 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b6e7874d-68a4-47bb-b930-e966cb13dbd3 - 29482 - meltano_csv_to_bigquery - STEP_SUCCESS - Finished execution of step "meltano_csv_to_bigquery" in 14.86s.

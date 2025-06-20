@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "id": "c0c4ffe1-8859-4452-a4a5-5231e6349ede",
+      "kwargs": {
+        "column": "review_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "96d73d9f-d79a-444e-ab71-c9c37376c199",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6503e113-6c62-45f7-bc71-7c9623967ef6",
+      "kwargs": {
+        "column": "order_id_review_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "6fddcd6a-586b-4ebd-81fd-ca6646a8b698",
+      "kwargs": {
+        "column": "order_id_review_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "b1ca81f3-eee9-4283-814f-b3cf1afc6352",
+      "kwargs": {
+        "column": "review_score",
+        "max_value": 5.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c524017e-4f1c-40ed-9775-38f2e14fd4c0",
+      "kwargs": {
+        "column": "review_comment_title"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "a73819eb-654b-4c41-809b-ae10c31d3a61",
+      "kwargs": {
+        "column": "review_comment_message"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "9c8219a7-23a2-4523-b421-5403953081e6",
+      "kwargs": {
+        "column": "review_creation_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "bd5844e7-29b0-422a-bab6-fefc16359054",
+      "kwargs": {
+        "column": "review_answer_timestamp",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    }
+  ],
+  "id": "5dd57655-a67e-4bbb-adab-a17737fa7a55",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_order_reviews_suite",
+  "notes": null
+}

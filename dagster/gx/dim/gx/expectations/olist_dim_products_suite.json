@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "id": "fbda33c0-212f-49a8-a60f-8ca9136637a4",
+      "kwargs": {
+        "column": "product_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "73417fc2-5bcf-412f-9dfb-2a82f17a71e8",
+      "kwargs": {
+        "column": "product_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "afb142ae-e4b3-42c1-8fb6-1923ff00df93",
+      "kwargs": {
+        "column": "product_category_name"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3ef38662-2209-4d9c-baba-132c6e1f1e5c",
+      "kwargs": {
+        "column": "product_name_length",
+        "max_value": 100.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "78a19bda-f6e4-4bdd-8b08-7d17be4942f6",
+      "kwargs": {
+        "column": "product_description_length",
+        "max_value": 4000.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "7e3c2220-50d1-4c3c-ab44-ad5c3390c7fb",
+      "kwargs": {
+        "column": "product_photos_qty",
+        "max_value": 25.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "06771a8f-a9b1-45f5-994d-7f80fca45dab",
+      "kwargs": {
+        "column": "product_weight_g",
+        "max_value": 50000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "88129974-4e74-4bce-95b3-ff359450dbb2",
+      "kwargs": {
+        "column": "product_length_cm",
+        "max_value": 200.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "e0c6bba9-52a2-4310-b2b4-62d4746e191a",
+      "kwargs": {
+        "column": "product_height_cm",
+        "max_value": 200.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d256eb75-be5c-46e5-9f71-8725433a7e2f",
+      "kwargs": {
+        "column": "product_width_cm",
+        "max_value": 200.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "a39ab352-cac6-4a6b-9411-6f03793eac2f",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_products_suite",
+  "notes": null
+}

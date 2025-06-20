@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "d89e7026-7b6c-4eba-be69-a116e23a564f",
+      "name": "olist_order_items_corrected_asset"
+    },
+    "batch_definition": {
+      "id": "d1bec2e1-2f69-4319-85f7-6667dbd69b4f",
+      "name": "olist_order_items_corrected_batch_def_name"
+    },
+    "datasource": {
+      "id": "2e9ed53f-266a-4d49-bca0-7b0a5aac3bb9",
+      "name": "BQ_olist_order_items_corrected_datasource"
+    }
+  },
+  "id": "688681ab-924b-4674-b55b-1c841f373c99",
+  "name": "BQ_order_items_corrected_validation_definition",
+  "suite": {
+    "id": "8ee86ae1-389b-44dd-aa25-f36103adf78d",
+    "name": "olist_order_items_corrected_suite"
+  }
+}

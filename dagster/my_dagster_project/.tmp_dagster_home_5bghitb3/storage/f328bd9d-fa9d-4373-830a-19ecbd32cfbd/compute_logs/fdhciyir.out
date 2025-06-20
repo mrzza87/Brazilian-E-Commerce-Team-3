@@ -1,0 +1,14 @@
+[0m09:21:19  Running with dbt=1.9.2
+[0m09:21:21  Registered adapter: bigquery=1.9.1
+[0m09:21:22  Found 1 model, 3 data tests, 491 macros
+[0m09:21:22  
+[0m09:21:22  Concurrency: 1 threads (target='dev')
+[0m09:21:22  
+[0m09:21:23  1 of 1 START sql table model GX_DBT_Test.dim_customer_100 ...................... [RUN]
+[0m09:21:28  1 of 1 OK created sql table model GX_DBT_Test.dim_customer_100 ................. [[32mCREATE TABLE (100.0 rows, 12.0 KiB processed)[0m in 4.21s]
+[0m09:21:28  
+[0m09:21:28  Finished running 1 table model in 0 hours 0 minutes and 5.61 seconds (5.61s).
+[0m09:21:28  
+[0m09:21:28  [32mCompleted successfully[0m
+[0m09:21:28  
+[0m09:21:28  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1

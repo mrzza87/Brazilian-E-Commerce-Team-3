@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "69ce63ed-7e15-49a9-8ed4-b5359d4ab293",
+      "name": "olist_dim_time_asset"
+    },
+    "batch_definition": {
+      "id": "ec94b58e-627a-4e62-94af-2f9134a1a3bc",
+      "name": "olist_dim_time_batch_def_name"
+    },
+    "datasource": {
+      "id": "81571c5f-c804-49b9-b0e9-286336dc2140",
+      "name": "BQ_olist_dim_time_datasource"
+    }
+  },
+  "id": "1eac28c0-7f9b-48fa-a703-59a9eac39a91",
+  "name": "BQ_dim_time_validation_definition",
+  "suite": {
+    "id": "e819db85-2717-499a-a65d-bb4f6aff7207",
+    "name": "olist_dim_time_suite"
+  }
+}

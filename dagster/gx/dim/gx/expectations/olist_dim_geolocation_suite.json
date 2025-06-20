@@ -1,0 +1,67 @@
+{
+  "expectations": [
+    {
+      "id": "d4e8a338-4c25-4504-957e-496bda1d511a",
+      "kwargs": {
+        "column": "surrogate_key"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "7efe77d6-abc0-4b49-b3d8-ac0bef05c9ec",
+      "kwargs": {
+        "column": "surrogate_key"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "77d7f874-7fff-4623-b23e-f686b2d8bc0e",
+      "kwargs": {
+        "column": "geolocation_zip_code_prefix",
+        "regex": "^\\d{5}$"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "647ee79c-8cbd-4312-a2fc-e9673b2f6929",
+      "kwargs": {
+        "column": "geolocation_lat"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "875b7163-3655-4ddc-bdb5-b31e0c7ffaec",
+      "kwargs": {
+        "column": "geolocation_lng"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "20e122e8-157c-4ded-a20f-cfb5db82a3a2",
+      "kwargs": {
+        "column": "geolocation_city"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "99afd012-590d-4249-82d2-09e236231fe5",
+      "kwargs": {
+        "column": "geolocation_state"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    }
+  ],
+  "id": "3fff1a50-10bb-493f-bd34-893d8c0b0d9f",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_geolocation_suite",
+  "notes": null
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "8a2651b8-1f4e-4645-8e88-a96bde84e87e",
+      "name": "olist_order_reviews_asset"
+    },
+    "batch_definition": {
+      "id": "ee5e1e28-4587-48f4-8670-fe735de52f0c",
+      "name": "olist_order_reviews_batch_def_name"
+    },
+    "datasource": {
+      "id": "73adaf82-bd70-4d7e-a749-8c1643ef8387",
+      "name": "BQ_olist_order_reviews_datasource"
+    }
+  },
+  "id": "e2a4ebef-c17c-484f-8a8f-45b936a9892f",
+  "name": "BQ_order_reviews_validation_definition",
+  "suite": {
+    "id": "384ac6f8-704a-4778-99e1-90cc451fde0f",
+    "name": "olist_order_reviews_suite"
+  }
+}

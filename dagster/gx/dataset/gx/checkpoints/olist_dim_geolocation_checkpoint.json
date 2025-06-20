@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      "name": "update_olist_site",
+      "site_names": [
+        "olist_data_docs_site"
+      ],
+      "type": "update_data_docs"
+    }
+  ],
+  "id": "8c9820ce-7a07-4fa2-ab7a-bb5ba43e057d",
+  "name": "olist_dim_geolocation_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "1da3fb64-46e3-4a40-95c6-acb169ad666f",
+      "name": "BQ_dim_geolocation_validation_definition"
+    }
+  ]
+}

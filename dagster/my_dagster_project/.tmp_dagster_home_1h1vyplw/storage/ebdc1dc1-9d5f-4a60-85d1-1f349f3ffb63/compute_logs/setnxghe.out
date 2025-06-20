@@ -1,0 +1,40 @@
+[0m07:03:42  Running with dbt=1.9.2
+[0m07:03:43  dbt version: 1.9.2
+[0m07:03:43  python version: 3.10.17
+[0m07:03:43  python path: /Users/luikk/miniconda3/envs/elt/bin/python3.10
+[0m07:03:43  os info: macOS-12.7.6-x86_64-i386-64bit
+[0m07:03:45  Using profiles dir at /Users/luikk/Brazilian-E-Commerce-Team-3-Org/GX/GX_DBT_Test
+[0m07:03:45  Using profiles.yml file at /Users/luikk/Brazilian-E-Commerce-Team-3-Org/GX/GX_DBT_Test/profiles.yml
+[0m07:03:45  Using dbt_project.yml file at /Users/luikk/Brazilian-E-Commerce-Team-3-Org/GX/GX_DBT_Test/dbt_project.yml
+[0m07:03:45  adapter type: bigquery
+[0m07:03:45  adapter version: 1.9.1
+[0m07:03:45  Configuration:
+[0m07:03:45    profiles.yml file [[32mOK found and valid[0m]
+[0m07:03:45    dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:03:45  Required dependencies:
+[0m07:03:45   - git [[32mOK found[0m]
+
+[0m07:03:45  Connection:
+[0m07:03:45    method: service-account
+[0m07:03:45    database: lkk-dsai
+[0m07:03:45    execution_project: lkk-dsai
+[0m07:03:45    schema: GX_DBT_Test
+[0m07:03:45    location: US
+[0m07:03:45    priority: None
+[0m07:03:45    maximum_bytes_billed: None
+[0m07:03:45    impersonate_service_account: None
+[0m07:03:45    job_retry_deadline_seconds: None
+[0m07:03:45    job_retries: 1
+[0m07:03:45    job_creation_timeout_seconds: None
+[0m07:03:45    job_execution_timeout_seconds: None
+[0m07:03:45    timeout_seconds: None
+[0m07:03:45    client_id: None
+[0m07:03:45    token_uri: None
+[0m07:03:45    dataproc_region: None
+[0m07:03:45    dataproc_cluster_name: None
+[0m07:03:45    gcs_bucket: None
+[0m07:03:45    dataproc_batch: None
+[0m07:03:45  Registered adapter: bigquery=1.9.1
+[0m07:03:48    Connection test: [[32mOK connection ok[0m]
+
+[0m07:03:48  [32mAll checks passed![0m

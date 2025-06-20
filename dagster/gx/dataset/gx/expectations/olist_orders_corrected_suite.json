@@ -1,0 +1,98 @@
+{
+  "expectations": [
+    {
+      "id": "29634436-ff31-46f8-bfde-3af61a75f15a",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "27f00f85-573e-4058-998e-aa75c185c717",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "7dee6f67-92a3-48e0-b181-ed652812079a",
+      "kwargs": {
+        "column": "customer_id"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "f7cea2f0-d0f7-4de7-b501-9299b25432e6",
+      "kwargs": {
+        "column": "order_status",
+        "mostly": 0.8,
+        "value_set": [
+          "approved",
+          "canceled",
+          "created",
+          "delivered",
+          "invoiced",
+          "processing",
+          "shipped",
+          "unavailable"
+        ]
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "7c4cef29-8837-424e-ac66-1bc4631ba6e0",
+      "kwargs": {
+        "column": "order_purchase_timestamp",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "ff7e1164-eeb7-485f-8e30-db4a8e8a95f8",
+      "kwargs": {
+        "column": "order_approved_at",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "bd051c05-3e49-4dbd-ad9c-f2de7053669b",
+      "kwargs": {
+        "column": "order_delivered_carrier_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "8a39c514-7d5b-480c-8ce9-e2a8f03612c9",
+      "kwargs": {
+        "column": "order_delivered_customer_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "f970a8f5-d2ae-4356-bfe7-7a90f25d8a2f",
+      "kwargs": {
+        "column": "order_estimated_delivery_date",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    }
+  ],
+  "id": "fbd041fc-dbe6-4035-a7bc-cf70b2b81cd3",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_orders_corrected_suite",
+  "notes": null
+}

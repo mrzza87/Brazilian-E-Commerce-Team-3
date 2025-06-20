@@ -1,0 +1,51 @@
+{
+  "expectations": [
+    {
+      "id": "945f9b8f-9a6d-472a-8893-e69af83b9ed8",
+      "kwargs": {
+        "column": "geolocation_zip_code_prefix",
+        "regex": "^\\d{5}$"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "8ee32e82-dff5-4ae9-8ead-3df4cc7dc0e8",
+      "kwargs": {
+        "column": "geolocation_lat"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "41297d11-d204-40eb-ae53-87746205984e",
+      "kwargs": {
+        "column": "geolocation_lng"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "52f4df86-5e92-4737-9de3-3ce9d3f692c1",
+      "kwargs": {
+        "column": "geolocation_city"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "40466396-8509-421e-b2e2-dc94edfd6e8e",
+      "kwargs": {
+        "column": "geolocation_state"
+      },
+      "meta": {},
+      "type": "expect_column_to_exist"
+    }
+  ],
+  "id": "894a91f6-57df-44a8-9c35-c3e00818005a",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_geolocation_suite",
+  "notes": null
+}

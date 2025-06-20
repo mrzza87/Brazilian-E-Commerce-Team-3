@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      "name": "update_olist_site",
+      "site_names": [
+        "olist_data_docs_site"
+      ],
+      "type": "update_data_docs"
+    }
+  ],
+  "id": "98913117-2148-4ce3-a951-0155a386adea",
+  "name": "olist_sellers_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "34152dae-dc95-4fc2-b5d5-580cdacd28f0",
+      "name": "BQ_sellers_validation_definition"
+    }
+  ]
+}

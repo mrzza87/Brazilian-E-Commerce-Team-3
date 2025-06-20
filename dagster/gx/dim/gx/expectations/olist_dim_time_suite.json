@@ -1,0 +1,48 @@
+{
+  "expectations": [
+    {
+      "id": "bc606a7c-f33b-4ff8-b6cf-9cf3812e93b9",
+      "kwargs": {
+        "column": "time_id",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_of_type"
+    },
+    {
+      "id": "f8038865-3438-45ba-8321-26622ed982d9",
+      "kwargs": {
+        "column": "hour",
+        "max_value": 23.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "be3fe4d6-d201-4104-9cbc-a8fc0021f188",
+      "kwargs": {
+        "column": "minute",
+        "max_value": 59.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8e0c29c4-f2c2-48b4-af7c-fb3a20f2a1dd",
+      "kwargs": {
+        "column": "time_hhmm",
+        "regex": "^\\d{2}:\\d{2}$"
+      },
+      "meta": {},
+      "type": "expect_column_values_to_match_regex"
+    }
+  ],
+  "id": "e819db85-2717-499a-a65d-bb4f6aff7207",
+  "meta": {
+    "great_expectations_version": "1.5.0"
+  },
+  "name": "olist_dim_time_suite",
+  "notes": null
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "91f7b54a-8995-4f81-b82b-9892078df85c",
+      "name": "olist_dim_customers_asset"
+    },
+    "batch_definition": {
+      "id": "84a9a2bd-d007-4ef5-9b3f-301f436b23c6",
+      "name": "olist_dim_customers_batch_def_name"
+    },
+    "datasource": {
+      "id": "169d13e3-f200-41a3-a4b4-9bc6bdae6aab",
+      "name": "BQ_olist_dim_customers_datasource"
+    }
+  },
+  "id": "d3f41789-7b78-4905-9eb0-9125fa6cf4bd",
+  "name": "BQ_dim_customers_validation_definition",
+  "suite": {
+    "id": "8115b1dd-2361-4e45-a329-3e6d67fecf99",
+    "name": "olist_dim_customers_suite"
+  }
+}

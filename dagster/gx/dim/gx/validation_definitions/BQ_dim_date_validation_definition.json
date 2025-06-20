@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "b9828567-9da7-4bb2-a94c-9a0ac8ee3aba",
+      "name": "olist_dim_date_asset"
+    },
+    "batch_definition": {
+      "id": "02ad25ae-4067-4983-b5fd-d33f7fbdb5ff",
+      "name": "olist_dim_date_batch_def_name"
+    },
+    "datasource": {
+      "id": "fa7746d7-904e-42f0-961c-2f2da6d847b6",
+      "name": "BQ_olist_dim_date_datasource"
+    }
+  },
+  "id": "3627d5d0-6f93-4b25-a2e1-ae59e58ef822",
+  "name": "BQ_dim_date_validation_definition",
+  "suite": {
+    "id": "ed1a8c8b-a5e3-40dd-9641-1efdfb10ebf3",
+    "name": "olist_dim_date_suite"
+  }
+}

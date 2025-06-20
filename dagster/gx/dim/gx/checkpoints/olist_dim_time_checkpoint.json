@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      "name": "update_olist_site",
+      "site_names": [
+        "olist_data_docs_site"
+      ],
+      "type": "update_data_docs"
+    }
+  ],
+  "id": "94077e4c-05b9-4f55-8f09-8e2bb31e8c95",
+  "name": "olist_dim_time_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "1eac28c0-7f9b-48fa-a703-59a9eac39a91",
+      "name": "BQ_dim_time_validation_definition"
+    }
+  ]
+}

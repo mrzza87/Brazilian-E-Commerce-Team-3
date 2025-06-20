@@ -1,0 +1,212 @@
+# Welcome to Great Expectations! Always know what to expect from your data.
+#
+# Here you can define datasources, batch kwargs generators, integrations and
+# more. This file is intended to be committed to your repo. For help with
+# configuration please:
+#   - Read our docs: https://docs.greatexpectations.io/docs/guides/connecting_to_your_data/connect_to_data_overview/#2-configure-your-datasource
+#   - Join our slack channel: http://greatexpectations.io/slack
+
+# config_version refers to the syntactic version of this config file, and is used in maintaining backwards compatibility
+# It is auto-generated and usually does not need to be changed.
+config_version: 4.0
+
+# This config file supports variable substitution which enables: 1) keeping
+# secrets out of source control & 2) environment-based configuration changes
+# such as staging vs prod.
+#
+# When GX encounters substitution syntax (like `my_key: ${my_value}` or
+# `my_key: $my_value`) in the great_expectations.yml file, it will attempt
+# to replace the value of `my_key` with the value from an environment
+# variable `my_value` or a corresponding key read from this config file,
+# which is defined through the `config_variables_file_path`.
+# Environment variables take precedence over variables defined here.
+#
+# Substitution values defined here can be a simple (non-nested) value,
+# nested value such as a dictionary, or an environment variable (i.e. ${ENV_VAR})
+#
+#
+# https://docs.greatexpectations.io/docs/guides/setup/configuring_data_contexts/how_to_configure_credentials
+
+
+config_variables_file_path: uncommitted/config_variables.yml
+
+# The plugins_directory will be added to your python path for custom modules
+# used to override and extend Great Expectations.
+plugins_directory: plugins/
+
+stores:
+# Stores are configurable places to store things like Expectations, Validations
+# Data Docs, and more. These are for advanced users only - most users can simply
+# leave this section alone.
+  expectations_store:
+    class_name: ExpectationsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: expectations/
+
+  validation_results_store:
+    class_name: ValidationResultsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: uncommitted/validations/
+
+  checkpoint_store:
+    class_name: CheckpointStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      suppress_store_backend_id: true
+      base_directory: checkpoints/
+
+  validation_definition_store:
+    class_name: ValidationDefinitionStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: validation_definitions/
+
+expectations_store_name: expectations_store
+validation_results_store_name: validation_results_store
+checkpoint_store_name: checkpoint_store
+
+data_docs_sites:
+  # Data Docs make it simple to visualize data quality in your project. These
+  # include Expectations, Validations & Profiles. The are built for all
+  # Datasources from JSON artifacts in the local repo including validations &
+  # profiles from the uncommitted directory. Read more at https://docs.greatexpectations.io/docs/terms/data_docs
+  local_site:
+    class_name: SiteBuilder
+    show_how_to_buttons: true
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: uncommitted/data_docs/local_site/
+    site_index_builder:
+      class_name: DefaultSiteIndexBuilder
+  olist_data_docs_site:
+    class_name: SiteBuilder
+    site_index_builder:
+      class_name: DefaultSiteIndexBuilder
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: uncommitted/data_docs/local_site/
+fluent_datasources:
+  BQ_olist_customers_datasource:
+    type: sql
+    id: 89d4cff4-965b-425d-9e0f-880b096f822b
+    assets:
+      olist_customers_asset:
+        type: table
+        id: 10330a0c-4d29-446f-9e8e-0d8f4f83bf6e
+        batch_metadata: {}
+        batch_definitions:
+          olist_customers_batch_def_name:
+            id: c170c65d-056b-4fe1-bcf2-a2181035f876
+            partitioner:
+        table_name: customers
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_orders_corrected_datasource:
+    type: sql
+    id: 3a1109c7-a396-4da9-9c0c-7078f16de0e4
+    assets:
+      olist_orders_corrected_asset:
+        type: table
+        id: ca831344-cc7b-429b-98de-ba8b800f2eef
+        batch_metadata: {}
+        batch_definitions:
+          olist_orders_corrected_batch_def_name:
+            id: 0f179add-fdbc-45ea-ad88-56b98d546f4b
+            partitioner:
+        table_name: orders_corrected
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_order_items_corrected_datasource:
+    type: sql
+    id: 2e9ed53f-266a-4d49-bca0-7b0a5aac3bb9
+    assets:
+      olist_order_items_corrected_asset:
+        type: table
+        id: d89e7026-7b6c-4eba-be69-a116e23a564f
+        batch_metadata: {}
+        batch_definitions:
+          olist_order_items_corrected_batch_def_name:
+            id: d1bec2e1-2f69-4319-85f7-6667dbd69b4f
+            partitioner:
+        table_name: order_items_corrected
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_order_payments_datasource:
+    type: sql
+    id: bf78bcdb-82f3-4a76-b617-9e33676e6242
+    assets:
+      olist_order_payments_asset:
+        type: table
+        id: d8e220df-4dbd-427b-bc5f-15a2553e4e29
+        batch_metadata: {}
+        batch_definitions:
+          olist_order_payments_batch_def_name:
+            id: bebeb0b3-7c0c-4374-a71d-f1aec61bac08
+            partitioner:
+        table_name: order_payments
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_order_reviews_datasource:
+    type: sql
+    id: 73adaf82-bd70-4d7e-a749-8c1643ef8387
+    assets:
+      olist_order_reviews_asset:
+        type: table
+        id: 8a2651b8-1f4e-4645-8e88-a96bde84e87e
+        batch_metadata: {}
+        batch_definitions:
+          olist_order_reviews_batch_def_name:
+            id: ee5e1e28-4587-48f4-8670-fe735de52f0c
+            partitioner:
+        table_name: order_reviews
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_products_corrected_datasource:
+    type: sql
+    id: bfc60bdc-657f-49d3-933e-5a52b3cad2ff
+    assets:
+      olist_products_corrected_asset:
+        type: table
+        id: 367e61ea-f4b6-4255-931d-8f30a01a1132
+        batch_metadata: {}
+        batch_definitions:
+          olist_products_corrected_batch_def_name:
+            id: 2cd5f116-299c-466a-b634-960cdad62b3b
+            partitioner:
+        table_name: products_corrected
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_sellers_datasource:
+    type: sql
+    id: 45590a0e-ffd5-46c0-bca8-5f62495e2a9b
+    assets:
+      olist_sellers_asset:
+        type: table
+        id: 2f5bc5e9-5578-4f99-af43-70e6c216287b
+        batch_metadata: {}
+        batch_definitions:
+          olist_sellers_batch_def_name:
+            id: f3e14b31-1f3b-4812-97dc-b463e13e6286
+            partitioner:
+        table_name: sellers
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+  BQ_olist_dim_geolocation_datasource:
+    type: sql
+    id: 5ec977ed-657c-451c-a550-9dfef3dc705b
+    assets:
+      olist_dim_geolocation_asset:
+        type: table
+        id: f16518eb-f43e-43d9-943b-3ec03643b371
+        batch_metadata: {}
+        batch_definitions:
+          olist_dim_geolocation_batch_def_name:
+            id: 43a24859-e332-4ef8-8a7a-e245b6d8c7eb
+            partitioner:
+        table_name: dim_geolocation
+        schema_name:
+    connection_string: bigquery://brazilian-e-commerce-team-3/BET_Team3
+analytics_enabled:
+data_context_id: c79b73f0-356c-48e2-a66d-3477e836e7c8

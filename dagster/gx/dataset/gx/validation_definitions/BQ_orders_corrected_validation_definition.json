@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "ca831344-cc7b-429b-98de-ba8b800f2eef",
+      "name": "olist_orders_corrected_asset"
+    },
+    "batch_definition": {
+      "id": "0f179add-fdbc-45ea-ad88-56b98d546f4b",
+      "name": "olist_orders_corrected_batch_def_name"
+    },
+    "datasource": {
+      "id": "3a1109c7-a396-4da9-9c0c-7078f16de0e4",
+      "name": "BQ_olist_orders_corrected_datasource"
+    }
+  },
+  "id": "7f5b1d39-4f83-497a-9b6e-27780520adcf",
+  "name": "BQ_orders_corrected_validation_definition",
+  "suite": {
+    "id": "fbd041fc-dbe6-4035-a7bc-cf70b2b81cd3",
+    "name": "olist_orders_corrected_suite"
+  }
+}

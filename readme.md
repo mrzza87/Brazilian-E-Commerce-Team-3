@@ -14,6 +14,11 @@
 
 This documentation provides a comprehensive overview of the Brazilian E-Commerce Team-3 data pipeline project, designed to build an end-to-end data engineering solution using the Brazilian E-Commerce dataset from Kaggle. The project implements a complete ELT pipeline from raw data ingestion through to analytical insights, following modern data engineering best practices.
 
+## Presentation Material
+
+The presentation material may be found on  
+[Canva](https://www.canva.com/design/DAGqk8Ch-mg/uo2e8j0M2r1RrEBLvM9lYQ/edit?utm_content=DAGqk8Ch-mg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) (View only).
+
 ## 1. Data Pipeline Architecture
 
 ### 1.1 High-Level Architecture Overview

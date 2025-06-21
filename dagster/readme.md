@@ -10,7 +10,7 @@ Step (3) Transformation to sample dim and fact table using dbt
 
 Step (4) GX validation of Olist dim and fact tables in Bigquery at brazilian-e-commerce-team-3.BET_Team3
 
-![Prototype Dagster Lineage](/docs/dagster lineage.png)
+![Prototype Dagster Lineage](/docs/dagster_lineage.png)
 
 Step (1) and (3) currently uses BQ lkk-dsai.GX_Meltano_Test and lkk-dsai.GX_DBT_Test which are accessible by the author's BQ service account.
 

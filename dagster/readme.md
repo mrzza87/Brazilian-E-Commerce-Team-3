@@ -239,6 +239,7 @@ bash
 cd <your path>/dagster/GX_DBT_Test
 dbt debug
 dbt run
+dbt test
 dbt docs generate
 dbt docs serve
 ```

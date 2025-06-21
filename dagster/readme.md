@@ -27,6 +27,8 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
   b) Replace path: (currently full local path where csv file is located)
 
   ```bash
+# meltano.yml
+
   extractors:
   - name: tap-csv
     variant: meltanolabs
@@ -52,6 +54,8 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
 *** Bigquery loader requires the JSON from the service account that can access the BQ project and dataset ***
 
   ```bash
+# meltano.yml
+
   loaders:
   - name: target-bigquery
     variant: z3z1ma
@@ -78,11 +82,38 @@ c) Replace keyfile (currently JSON from service account that can access lkk-dsai
 
 *** Make sure JSON in the keyfile is from the service account that can access the BQ project and dataset ***
 
+  ```bash
+# profiles.yml
+
+GX_DBT_Test:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: <your BQ project id>
+      dataset: <your BQ dataset name>
+      threads: 1
+      location: US
+      keyfile: <your path>/<your BQ service account>.json
+```
+
+
 2.2) /dagster/GX_DBT_Test/dbt_project.yml:
 
 a) Replace dataset(currently GX_DBT_Test)
 
 b) Replace schema (currently dim_customer_100)
+
+```bash
+# dbt_project.yml
+
+models:
+  GX_DBT_Test:
+    dim_customer_100:
+      +materialized: table
+```
+
 
 2.3) /dagster/GX_DBT_Test/models/dim_customer_100.sql
 

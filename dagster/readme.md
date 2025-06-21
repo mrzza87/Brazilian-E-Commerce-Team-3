@@ -16,11 +16,6 @@ They can be replaced by actual Meltano ingestion/loading of data tables to BQ Br
 
 Step (2) and (4) are validating the data, dim and fact tables already in BQ Brazilian-e-commerce-team-3.BET_Team3
 
-## Directory Structure:
-
-![directory] (/docs/dagster_directory.png)
-
-
 ## Important notes:
 ### 1) Meltano
 1.1) meltano.yml:

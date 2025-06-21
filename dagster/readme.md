@@ -239,6 +239,26 @@ Execute "meltano run tap-csv target-bigquery" from the full path defined in cwd.
 
 Replace cwd with the full path of Meltano working directory (<your path>/dagster/GX_Meltano_Test).
 
+```bash
+# assets.py
+
+@asset
+def meltano_csv_to_bigquery(context: AssetExecutionContext):
+    """Runs Meltano pipeline to move data from CSV to BigQuery."""
+    try:
+        result = subprocess.run(
+            ["meltano", "run", "tap-csv", "target-bigquery"],
+            cwd = "/Users/luikk/Brazilian-E-Commerce-Team-3-Org/Dagster/GX_Meltano_Test",
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        context.log.info(result.stdout)
+    except subprocess.CalledProcessError as e:
+        context.log.error(e.stderr)
+        raise
+```
+
 4.1.2) GX_validate_meltano:
 
 It is dependent on meltano_csv_to_bigquery to be materialised.
@@ -246,6 +266,20 @@ It is dependent on meltano_csv_to_bigquery to be materialised.
 Execute "python gx_table_validation.py" from the full path defined in cwd.
 
 Replace cwd with the full path to gx_table_validation.py (<your path>/dagster/gx/dataset).
+
+```bash
+@asset(deps=[meltano_csv_to_bigquery])
+def GX_validate_meltano():
+    """Runs GX validation after meltano"""
+    try:
+        subprocess.run(
+            ["python", "gx_table_validation.py"], 
+            cwd="/Users/luikk/Brazilian-E-Commerce-Team-3-Org/Dagster/gx/dataset",
+            check=True
+        )
+    except subprocess.CalledProcessError as e:
+        raise Exception(f"GX after Meltano run failed: {e}")
+```
 
 4.1.3) run_dbt:
 
@@ -257,6 +291,21 @@ Replace the path with "<your path>/dagster/GX_DBT_Test"
 
 Replace cwd with the full path to DBT working directory (<your path>/dagster/GX_DBT_Test).
 
+```bash
+# assets.py
+
+@asset(deps=[GX_validate_meltano])
+def dbt_run():
+    """Runs dbt run"""
+    try:
+        subprocess.run(["dbt", "run", "--project-dir", "/Users/luikk/Brazilian-E-Commerce-Team-3-Org/Dagster/GX_DBT_Test"], 
+                       check=True, 
+                       cwd="/Users/luikk/Brazilian-E-Commerce-Team-3-Org/Dagster/GX_DBT_Test/"
+        )
+    except subprocess.CalledProcessError as e:
+        raise Exception(f"DBT run failed: {e}")
+```
+
 4.1.4) GX_validate_dbt:
 
 It is dependent on run_dbt to be materialised.
@@ -265,11 +314,40 @@ Execute "python gx_dim_fact_validation.py" from the full path defined in cwd.
 
 Replace cwd with the full path to gx_dim_fact_validation.py (<your path>/dagster/gx/dim).
 
+```bash
+# assets.py
+
+@asset(deps=[dbt_run])
+def GX_validate_dbt():
+    """Runs GX validation after dbt"""
+    try:
+        subprocess.run(
+            ["python", "gx_dim_fact_validation.py"], 
+            cwd="/Users/luikk/Brazilian-E-Commerce-Team-3-Org/Dagster/gx/dim",
+            check=True
+        )
+    except subprocess.CalledProcessError as e:
+        raise Exception(f"GX after Meltano run failed: {e}")
+```
+
 4.2) /dagster/my_dagster_project/my_dagster_project/__init__.py
 
 Import the 4 assets from assets.py and define them for use by dagster
 
+```bash
+# __init__.py
+
+from dagster import Definitions
+from my_dagster_project.assets import meltano_csv_to_bigquery, GX_validate_meltano, dbt_run, GX_validate_dbt
+
+defs = Definitions(
+    assets=[meltano_csv_to_bigquery, GX_validate_meltano, dbt_run, GX_validate_dbt],
+)
+```
+
 # Running Dagster:
+
+```bash
 conda activate elt
 
 cd my_dagster_project (change to your dagster project path: "<your path>/dagster/my_dagster_project")
@@ -279,6 +357,7 @@ dagster dev
 <open browser http://127.0.0.1:3000>
 
 <Assets->View Lineage->Materialised all>
+```
 
 Author: Lui KK
 

@@ -18,8 +18,7 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
 
 ## Directory Structure:
 
-![directory]docs/dagster_directory.png
-
+![directory] (/docs/dagster_directory.png)
 
 
 ## Important notes:

@@ -26,6 +26,21 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
 
   b) Replace path: (currently full local path where csv file is located)
 
+  ```bash
+  extractors:
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files:
+        - entity: customer_100
+          path: /Users/luikk/desktop/project/customer_100.csv
+          keys: [customer_id]
+          elimiter: ","
+          encoding: "utf-8"
+          format: "csv"
+```
+
   1.1.2) Loader:
 
   a) Replace project (currently lkk-dsai)

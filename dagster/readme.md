@@ -103,10 +103,6 @@ GX_DBT_Test:
 
 2.2) /dagster/GX_DBT_Test/dbt_project.yml:
 
-a) Replace dataset(currently GX_DBT_Test)
-
-b) Replace schema (currently dim_customer_100)
-
 ```bash
 # dbt_project.yml
 

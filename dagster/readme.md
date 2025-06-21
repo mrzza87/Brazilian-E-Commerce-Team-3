@@ -14,12 +14,14 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
 ## Important notes:
 ### 1) Meltano
 1.1) meltano.yml:
+
 1.1.1) Extractor:
 
 customer_100.csv is provided as the csv to be used by extractor tap-csv and has customer_id as key.
 Replace path: (currently full local path where csv file is located)
 
 1.1.2) Loader:
+
 a) Replace project (currently lkk-dsai)
 b) Replace dataset (currently GX_Meltano_Test)
 c) Replace credentials_path (currently JSON from service account that can access lkk-dsai)
@@ -29,16 +31,19 @@ c) Replace credentials_path (currently JSON from service account that can access
 
 ### 2) DBT
 2.1) /dagster/GX_DBT_Test/profiles.yml:
+
 a) Replace project (currently lkk-dsai)
 b) Replace dataset (currently GX_DBT_Test)
 c) Replace keyfile (currently JSON from service account that can access lkk-dsai)
 *** Make sure JSON in the keyfile is from the service account that can access the BQ project and dataset ***
 
 2.2) /dagster/GX_DBT_Test/dbt_project.yml:
+
 a) Replace dataset(currently GX_DBT_Test)
 b) Replace schema (currently dim_customer_100)
 
 2.3) /dagster/GX_DBT_Test/models/dim_customer_100.sql
+
 a) select data from lkk-dsai.GX_Meltano_Test.customer_100 which was created from 1.1.2 by Meltano. Change the source if required.
 
 2.4) /dagster/GX_DBT_Test/models/schema.yml
@@ -64,6 +69,7 @@ Uses the 4 assets to form this lineage: meltano_csv_to_bigquery -> GX_validate_m
 4.1) /dagster/my_dagster_project/my_dagster_project/assets.py
 
 Defines the 4 assets used in the lineage.  Uses sub-process to execute.
+
 4.1.1) meltano_csv_to_bigquery: 
 
 Execute "meltano run tap-csv target-bigquery" from the full path defined in cwd.  

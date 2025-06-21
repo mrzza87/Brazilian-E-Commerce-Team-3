@@ -45,6 +45,7 @@ c) Replace keyfile (currently JSON from service account that can access lkk-dsai
 2.2) /dagster/GX_DBT_Test/dbt_project.yml:
 
 a) Replace dataset(currently GX_DBT_Test)
+
 b) Replace schema (currently dim_customer_100)
 
 2.3) /dagster/GX_DBT_Test/models/dim_customer_100.sql
@@ -53,7 +54,9 @@ a) select data from lkk-dsai.GX_Meltano_Test.customer_100 which was created from
 
 2.4) /dagster/GX_DBT_Test/models/schema.yml
 
-name must match the schema in dbt_project.yml. Columns are defined in the lkk-dsai.GX_Meltano_Test.customer_100.  
+name must match the schema in dbt_project.yml. 
+
+Columns are defined in the lkk-dsai.GX_Meltano_Test.customer_100.  
 
 ### 3) GX
 3.1) /dagster/gx/dataset/gx_table_validation.py

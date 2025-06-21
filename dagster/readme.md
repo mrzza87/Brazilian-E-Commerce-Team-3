@@ -34,7 +34,7 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
     config:
       files:
         - entity: customer_100
-          path: /Users/luikk/desktop/project/customer_100.csv
+          path: <your path>/customer_100.csv
           keys: [customer_id]
           elimiter: ","
           encoding: "utf-8"
@@ -50,6 +50,21 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
   c) Replace credentials_path (currently JSON from service account that can access lkk-dsai)
 
 *** Bigquery loader requires the JSON from the service account that can access the BQ project and dataset ***
+
+  ```bash
+  loaders:
+  - name: target-bigquery
+    variant: z3z1ma
+    pip_url: git+https://github.com/z3z1ma/target-bigquery.git
+    config:
+      project: <your BQ project id>
+      dataset: <your BQ dataset name>
+      credentials_path: <your path>/<your BQ service account>.json
+      method: batch_job
+      denormalized: true
+      flattening_enabled: true
+      flattening_max_depth: 1
+```
 
 
 ### 2) DBT

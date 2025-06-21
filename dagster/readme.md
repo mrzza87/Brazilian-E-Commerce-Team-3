@@ -23,7 +23,9 @@ Replace path: (currently full local path where csv file is located)
 1.1.2) Loader:
 
 a) Replace project (currently lkk-dsai)
+
 b) Replace dataset (currently GX_Meltano_Test)
+
 c) Replace credentials_path (currently JSON from service account that can access lkk-dsai)
 
 *** Bigquery loader requires the JSON from the service account that can access the BQ project and dataset ***
@@ -33,8 +35,11 @@ c) Replace credentials_path (currently JSON from service account that can access
 2.1) /dagster/GX_DBT_Test/profiles.yml:
 
 a) Replace project (currently lkk-dsai)
+
 b) Replace dataset (currently GX_DBT_Test)
+
 c) Replace keyfile (currently JSON from service account that can access lkk-dsai)
+
 *** Make sure JSON in the keyfile is from the service account that can access the BQ project and dataset ***
 
 2.2) /dagster/GX_DBT_Test/dbt_project.yml:
@@ -73,25 +78,33 @@ Defines the 4 assets used in the lineage.  Uses sub-process to execute.
 4.1.1) meltano_csv_to_bigquery: 
 
 Execute "meltano run tap-csv target-bigquery" from the full path defined in cwd.  
+
 Replace cwd with the full path of Meltano working directory (<your path>/dagster/GX_Meltano_Test).
 
 4.1.2) GX_validate_meltano:
 
 It is dependent on meltano_csv_to_bigquery to be materialised.
+
 Execute "python gx_table_validation.py" from the full path defined in cwd.
+
 Replace cwd with the full path to gx_table_validation.py (<your path>/dagster/gx/dataset).
 
 4.1.3) run_dbt:
 
 It is dependent on GX_validate_meltano to be materialised.
+
 Execute "dbt run --project-dir /Users/luikk/Brazilian-E-Commerce-Team-3-Org/dagster/GX_DBT_Test"
+
 Replace the path with "<your path>/dagster/GX_DBT_Test"
+
 Replace cwd with the full path to DBT working directory (<your path>/dagster/GX_DBT_Test).
 
 4.1.4) GX_validate_dbt:
 
 It is dependent on run_dbt to be materialised.
+
 Execute "python gx_dim_fact_validation.py" from the full path defined in cwd.
+
 Replace cwd with the full path to gx_dim_fact_validation.py (<your path>/dagster/gx/dim).
 
 4.2) /dagster/my_dagster_project/my_dagster_project/__init__.py
@@ -100,11 +113,17 @@ Import the 4 assets from assets.py and define them for use by dagster
 
 # Running Dagster:
 conda activate elt
+
 cd my_dagster_project (change to your dagster project path: "<your path>/dagster/my_dagster_project")
+
 dagster dev
+
 <open browser http://127.0.0.1:3000>
+
 <Assets->View Lineage->Materialised all>
 
 Author: Lui KK
+
 Version v1.0
+
 Date: 20 Jun 2025

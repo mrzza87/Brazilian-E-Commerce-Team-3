@@ -119,11 +119,42 @@ models:
 
 a) select data from lkk-dsai.GX_Meltano_Test.customer_100 which was created from 1.1.2 by Meltano. Change the source if required.
 
+```bash
+# dim_customer_100.sql
+
+SELECT *
+FROM `lkk-dsai.GX_Meltano_Test.customer_100`
+LIMIT 100
+```
+
 2.4) /dagster/GX_DBT_Test/models/schema.yml
 
 name must match the schema in dbt_project.yml. 
 
-Columns are defined in the lkk-dsai.GX_Meltano_Test.customer_100.  
+Columns are defined in the lkk-dsai.GX_Meltano_Test.customer_100. 
+
+```bash
+# schema.yml
+
+models:
+  - name: dim_customer_100
+    description: "Customer dimension with city and state"
+    columns:
+      - name: customer_id
+        description: "Primary key - unique identifier for customer"
+        tests: [unique, not_null]
+      - name: customer_unique_id
+        description: "Anonymized customer ID"
+      - name: customer_city
+        description: "City of the customer"
+      - name: customer_state
+        description: "State of the customer"
+      - name: customer_zip_code_prefix
+        description: "ZIP code prefix of the customer"
+        tests:
+          - not_null
+```
+
 
 ### 3) GX
 3.1) /dagster/gx/dataset/gx_table_validation.py

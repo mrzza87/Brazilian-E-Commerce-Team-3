@@ -17,8 +17,9 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
 
 1.1.1) Extractor:
 
-customer_100.csv is provided as the csv to be used by extractor tap-csv and has customer_id as key.
-Replace path: (currently full local path where csv file is located)
+a) customer_100.csv is provided as the csv to be used by extractor tap-csv and has customer_id as key.
+
+b) Replace path: (currently full local path where csv file is located)
 
 1.1.2) Loader:
 

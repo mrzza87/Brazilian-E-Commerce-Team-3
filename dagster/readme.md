@@ -20,19 +20,19 @@ Step (2) and (4) are validating the data, dim and fact tables already in BQ Braz
 ### 1) Meltano
 1.1) meltano.yml:
 
-1.1.1) Extractor:
+  1.1.1) Extractor:
 
-a) customer_100.csv is provided as the csv to be used by extractor tap-csv and has customer_id as key.
+  a) customer_100.csv is provided as the csv to be used by extractor tap-csv and has customer_id as key.
 
-b) Replace path: (currently full local path where csv file is located)
+  b) Replace path: (currently full local path where csv file is located)
 
-1.1.2) Loader:
+  1.1.2) Loader:
 
-a) Replace project (currently lkk-dsai)
+  a) Replace project (currently lkk-dsai)
 
-b) Replace dataset (currently GX_Meltano_Test)
+  b) Replace dataset (currently GX_Meltano_Test)
 
-c) Replace credentials_path (currently JSON from service account that can access lkk-dsai)
+  c) Replace credentials_path (currently JSON from service account that can access lkk-dsai)
 
 *** Bigquery loader requires the JSON from the service account that can access the BQ project and dataset ***
 

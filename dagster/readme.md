@@ -1,10 +1,13 @@
 # Dagster orchestration prototype
 
-This is a prototype of dagster orchestration to demonstrate
+This is a prototype of dagster orchestration to demonstrate:
 
 Step (1) Ingestion of sample local csv file and loading of sample table to Bigquery using Meltano
+
 Step (2) GX validation of the Olist tables in Bigquery at brazilian-e-commerce-team-3.BET_Team3
+
 Step (3) Transformation to sample dim and fact table using dbt
+
 Step (4) GX validation of Olist dim and fact tables in Bigquery at brazilian-e-commerce-team-3.BET_Team3
 
 Step (1) and (3) currently uses BQ lkk-dsai.GX_Meltano_Test and lkk-dsai.GX_DBT_Test which are accessible by the author's BQ service account.

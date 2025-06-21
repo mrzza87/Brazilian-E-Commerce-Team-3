@@ -268,6 +268,8 @@ Execute "python gx_table_validation.py" from the full path defined in cwd.
 Replace cwd with the full path to gx_table_validation.py (<your path>/dagster/gx/dataset).
 
 ```bash
+# assets.py
+
 @asset(deps=[meltano_csv_to_bigquery])
 def GX_validate_meltano():
     """Runs GX validation after meltano"""

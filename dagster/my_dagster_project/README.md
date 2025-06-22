@@ -2,6 +2,9 @@
 
 This is a [Dagster](https://dagster.io/) project scaffolded with [`dagster project scaffold`](https://docs.dagster.io/guides/build/projects/creating-a-new-project).
 
+For full details of the dagster prototype implementation for Brazilian-E-Commerce, 
+please refer to https://github.com/mrzza87/Brazilian-E-Commerce-Team-3/blob/main-clean/dagster/readme.md
+
 ## Getting started
 
 First, install your Dagster code location as a Python package. By using the --editable flag, pip will install your Python package in ["editable mode"](https://pip.pypa.io/en/latest/topics/local-project-installs/#editable-installs) so that as you develop, local code changes will automatically apply.

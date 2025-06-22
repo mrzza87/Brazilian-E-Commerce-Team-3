@@ -1,7 +1,7 @@
 Welcome to your new dbt project!
 
 ### Using the starter project
-This DBT configuration is dependent on the existence of customer_100 table in "<your BQ project id>.<your BQ dataset name>"
+This DBT configuration is dependent on the existence of customer_100 table in your BQ project id and your BQ dataset.
 
 #### Update /dagster/GX_DBT_Test/models/dim_customer_100.sql
 

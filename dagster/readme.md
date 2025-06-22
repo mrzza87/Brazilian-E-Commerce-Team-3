@@ -193,13 +193,15 @@ models:
 
 3.3) /dagster/GX_DBT_Test/models/dim_customer_100.sql
 
-a) select data from lkk-dsai.GX_Meltano_Test.customer_100 which was created from 1.1.2 by Meltano. Change the source if required.
+a) select data from <your BQ project id>.<your BQ dataset>.customer_100 which was created by Meltano. 
+
+Current setting is lkk-dsai.GX_Meltano_Test.customer_100
 
 ```bash
 # dim_customer_100.sql
 
 SELECT *
-FROM `lkk-dsai.GX_Meltano_Test.customer_100`
+FROM `<your BQ project id>.<your BQ dataset name>.customer_100`
 LIMIT 100
 ```
 
@@ -207,7 +209,7 @@ LIMIT 100
 
 name must match the schema in dbt_project.yml. 
 
-Columns are defined in the lkk-dsai.GX_Meltano_Test.customer_100. 
+Columns are defined in the <your BQ project id>.<your BQ project id>.customer_100. 
 
 ```bash
 # schema.yml

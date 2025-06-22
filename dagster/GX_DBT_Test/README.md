@@ -33,6 +33,7 @@ outputs:
     location: US
     keyfile: <your path>/<your BQ service account>.json
 ```
+Run and test your DBT project
 
 ```bash
 cd <your path>/dagster/GX_DBT_Test

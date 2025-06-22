@@ -7,3 +7,8 @@ Contains all the .py files for command line execution to validate datasets and d
 before calling run_checkpoint to validate the target table.  Validation results will be shown on the Data_Docs_Site.
 
 At the terminal using elt kernel, run 'python dim_fact_validation.py'
+
+Alternative version for CLI execution can be found at : 
+https://github.com/mrzza87/Brazilian-E-Commerce-Team-3/tree/main-clean/dagster/gx
+
+

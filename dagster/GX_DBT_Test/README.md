@@ -3,7 +3,7 @@ Welcome to your new dbt project!
 ### Using the starter project
 This DBT configuration is dependent on the existence of <your BQ project id>.<your BQ dataset name>.customer_100 table.
 
-# Update /dagster/GX_DBT_Test/models/dim_customer_100.sql
+#### Update /dagster/GX_DBT_Test/models/dim_customer_100.sql
 
 Select data from <your BQ project id>.<your BQ dataset name>.customer_100 which was created by Meltano.
 
@@ -17,7 +17,7 @@ FROM `<your BQ project id>.<your BQ dataset name>.customer_100`
 LIMIT 100
 ```
 
-# Update profiles.yml with the following:
+#### Update profiles.yml with the following:
 
 ```# profiles.yml
 

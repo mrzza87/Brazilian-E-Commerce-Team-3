@@ -1,6 +1,7 @@
 Update the extractor and loader config in meltano.yml
 
 Extractor (tap-csv): path to customer_100.csv
+
 Loader (target-cvs): BQ project id, BQ dataset name, BQ JSON credentials of service account that can access BQ project and dataset.
 
 ```bash
